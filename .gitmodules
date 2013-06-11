@@ -28,3 +28,6 @@
 [submodule "vim/bundle/vim-sparkup"]
 	path = vim/bundle/vim-sparkup
 	url = git://github.com/tristen/vim-sparkup.git
+[submodule "vim/bundle/vim-nerdtree-tabs"]
+	path = vim/bundle/vim-nerdtree-tabs
+	url = https://github.com/jistr/vim-nerdtree-tabs.git
