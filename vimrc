@@ -14,4 +14,6 @@ set number                  " show line numbers
 set encoding=utf-8          " set encoding
 set showtabline=2           " always show tabs in gvim, but not in vim
 
+let g:nerdtree_tabs_open_on_gui_startup=0 "do not automatically open NERDTreeTabs
+
 map <F2> :NERDTreeTabsToggle<CR>
