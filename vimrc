@@ -1,4 +1,4 @@
-execute pathogen#infect()   " run pathogen to load plugins
+execute pathogen#infect()
 filetype plugin indent on   " enables filetype detection
 
 syntax on                   " syntax highlighting
@@ -14,4 +14,4 @@ set number                  " show line numbers
 set encoding=utf-8          " set encoding
 set showtabline=2           " always show tabs in gvim, but not in vim
 
-map <F2> :NERDTreeToggle<CR>
+map <F2> :NERDTreeTabsToggle<CR>
