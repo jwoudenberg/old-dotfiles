@@ -25,6 +25,3 @@
 [submodule "vim/bundle/vim-easymotion"]
 	path = vim/bundle/vim-easymotion
 	url = git://github.com/Lokaltog/vim-easymotion.git
-[submodule "vim/bundle/vim-sparkup"]
-	path = vim/bundle/vim-sparkup
-	url = git://github.com/bingaman/vim-sparkup.git
