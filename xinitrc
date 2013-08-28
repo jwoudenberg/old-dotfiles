@@ -1,5 +1,8 @@
 #!/bin/sh
 
+#Load Xresources
+[[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
+
 #Disable monitor powersave and screensaver
 setterm -blank 0 -powersave off -powerdown 0
 xset s off
