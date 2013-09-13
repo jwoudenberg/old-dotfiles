@@ -1,2 +1,20 @@
-/*jslint nomen: true, sloppy: true, white: true, indent: 4, maxlen: 100 */
-/*global require, define */
+{
+    "bitwise": true,
+    "camelcase": true,
+    "curly": true,
+    "eqeqeq": true,
+    "imed": true,
+    "indent": 4,
+    "latedef": true,
+    "newcap": true,
+    "noarg": true,
+    "nonew": true,
+    "quotmark": "single",
+    "undef": true,
+    "unused": true,
+    "maxlen": 100,
+
+    "browser": true,
+    "jquery": true,
+    "node": true
+}
