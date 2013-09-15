@@ -11,6 +11,7 @@ alias grep='grep --color=auto'
 alias lock='xscreensaver-command --lock'
 alias shutdown='sudo shutdown -h now'
 alias reboot='sudo shutdown -r now'
+alias unzip='7z e'
 
 # Start x
 [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx
