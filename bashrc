@@ -8,6 +8,9 @@ set -o vi
 # Set aliases
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
+alias lock='xscreensaver-command --lock'
+alias shutdown='sudo shutdown -h now'
+alias reboot='sudo shutdown -r now'
 
 # Start x
 [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx

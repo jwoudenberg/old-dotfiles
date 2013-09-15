@@ -4,7 +4,7 @@ filetype plugin indent on   " enables filetype detection
 syntax on                   " syntax highlighting
 colorscheme molokai
 
-set guifont=droid\ sans\ mono\ for\ powerline\ 8
+set guifont=inconsolata\ 10
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 set laststatus=2            " always display the statusline in all windows
 set tabstop=4               " number of spaces in the tab-character
