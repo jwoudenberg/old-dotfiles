@@ -1,6 +1,7 @@
 execute pathogen#infect()
 execute pathogen#helptags()
 filetype plugin indent on   " enables filetype detection
+set omnifunc=syntaxcomplete#Complete
 
 syntax on                   " syntax highlighting
 colorscheme molokai
