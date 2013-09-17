@@ -9,8 +9,6 @@ set -o vi
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias lock='xscreensaver-command --lock'
-alias shutdown='shutdown -h now'
-alias reboot='shutdown -r now'
 alias unzip='7z e'
 
 # Start x
