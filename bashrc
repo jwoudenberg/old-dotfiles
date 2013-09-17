@@ -10,6 +10,7 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias lock='xscreensaver-command --lock'
 alias unzip='7z e'
+alias xclip='xclip -selection clipboard'
 
 # Start x
 [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx
