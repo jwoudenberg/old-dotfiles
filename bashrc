@@ -14,6 +14,7 @@ alias grep='grep --color=auto'
 alias lock='xscreensaver-command --lock'
 alias unzip='7z e'
 alias xclip='xclip -selection clipboard'
+alias gim='gvim'
 
 # Start x
 [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx
