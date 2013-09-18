@@ -16,3 +16,6 @@
 *color13:    rgb:af/5f/5f
 *color14:    rgb:ac/f0/f2
 *color15:    rgb:e2/e2/e5
+
+xterm*faceName: Inconsolata:size=10:antialias=true
+xterm*font: 7x13

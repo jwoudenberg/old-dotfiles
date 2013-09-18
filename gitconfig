@@ -1,3 +1,5 @@
 [user]
 	name = Jasper Woudenber
 	email = mail@jasperwoudenberg.com
+[mergetool]
+	keepBackup = false
