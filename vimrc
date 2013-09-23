@@ -21,3 +21,5 @@ let g:airline_powerline_fonts=1             " automatically add airline symbols
 let g:airline_theme="powerlineish"          " airline theme
 
 map <F2> :NERDTreeTabsToggle<CR>
+
+autocmd BufWritePre * :%s/\s\+$//e  " automatically remove trailing whitespace on writing
