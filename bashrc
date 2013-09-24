@@ -17,4 +17,4 @@ alias xclip='xclip -selection clipboard'
 alias gim='gvim'
 
 # start x
-[[ -z $display && $xdg_vtnr -eq 1 ]] && exec startx
+[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx
