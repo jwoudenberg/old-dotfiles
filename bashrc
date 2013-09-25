@@ -5,6 +5,9 @@ export PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w\[\033[31m\] $(__git_ps1) \[\0
 source /usr/share/git/completion/git-completion.bash
 source /usr/share/git/completion/git-prompt.sh
 
+# set path
+PATH="${PATH}:/home/jasper/scripts"
+
 # Set vim-keybindings
 set -o vi
 
