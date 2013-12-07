@@ -6,7 +6,7 @@ set omnifunc=syntaxcomplete#Complete
 syntax on                   " syntax highlighting
 colorscheme molokai
 
-set guifont=Inconsolata\ 10
+set guifont=Sauce\ Code\ Powerline\ 9
 set laststatus=2            " always display the statusline in all windows
 set tabstop=4               " number of spaces in the tab-character
 set shiftwidth=4            " number of spaces in indent

@@ -1,21 +1,23 @@
-*background: #242424
-*foreground: #e2e2e5
-*color0:    rgb:00/00/00
-*color1:    rgb:ff/5d/28
-*color2:    rgb:b1/d6/31
-*color3:    rgb:e6/ea/50
-*color4:    rgb:7e/8a/a2
-*color5:    rgb:af/5f/5f
-*color6:    rgb:ac/f0/f2
-*color7:    rgb:e2/e2/e5
-*color8:    rgb:00/00/00
-*color9:    rgb:ff/5d/28
-*color10:    rgb:b1/d6/31
-*color11:    rgb:e6/ea/50
-*color12:    rgb:7e/8a/a2
-*color13:    rgb:af/5f/5f
-*color14:    rgb:ac/f0/f2
-*color15:    rgb:e2/e2/e5
-
-xterm*faceName: Inconsolata:size=10:antialias=true
+xterm*faceName: Sauce Code Powerline:size=9:antialias=true
 xterm*font: 7x13
+
+! Colors
+! Monokai
+xterm*background: #101010
+xterm*foreground: #FEFEFE
+xterm*color0: #1C1D19
+xterm*color1: #D01B24
+xterm*color2: #A7D32C
+xterm*color3: #D8CF67
+xterm*color4: #61B8D0
+xterm*color5: #695ABB
+xterm*color6: #D53864
+xterm*color7: #FEFFFE
+xterm*color8: #1C1D19
+xterm*color9: #D12A24
+xterm*color10: #A7D32C
+xterm*color11: #D8CF67
+xterm*color12: #61B8D0
+xterm*color13: #695ABB
+xterm*color14: #D53864
+xterm*color15: #FEFEFE
