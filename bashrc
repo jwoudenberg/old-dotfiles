@@ -15,7 +15,6 @@ set -o vi
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias lock='xscreensaver-command --lock'
-alias unzip='7z e'
 alias xclip='xclip -selection clipboard'
 alias gim='gvim'
 alias gitl='git log --graph --format=format:"%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold white)— %an%C(reset)%C(bold yellow)%d%C(reset)" --abbrev-commit --date=relative'
