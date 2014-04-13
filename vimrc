@@ -10,13 +10,16 @@ set guifont=Sauce\ Code\ Powerline\ 9
 set laststatus=2            " always display the statusline in all windows
 set tabstop=4               " number of spaces in the tab-character
 set shiftwidth=4            " number of spaces in indent
+set shiftround              " Round indent to multiples of shiftwidth.
 set expandtab               " expand a tab into spaces
+set smarttab                " remove tabs when backspacing
 set relativenumber          " show relative line numbers
 set number                  " show line numbers
 set encoding=utf-8          " set encoding
 set showtabline=2           " always show tabs in gvim, but not in vim
 set splitbelow              " add new splits below current window
 set splitright              " add new splits to the right of current window
+set scrolloff=1             " always keep a line above and below the cursor
 
 let mapleader=","
 let g:nerdtree_tabs_open_on_gui_startup=0   " do not automatically open NERDTreeTabs
