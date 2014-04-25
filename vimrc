@@ -20,6 +20,7 @@ set showtabline=2           " always show tabs in gvim, but not in vim
 set splitbelow              " add new splits below current window
 set splitright              " add new splits to the right of current window
 set scrolloff=1             " always keep a line above and below the cursor
+set incsearch               " highlight search term while typing
 
 let mapleader=","
 let g:nerdtree_tabs_open_on_gui_startup=0   " do not automatically open NERDTreeTabs
@@ -32,6 +33,6 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-map <F2> :NERDTreeTabsToggle<CR>
+map <Leader> <Plug>(easymotion-prefix)
 
 autocmd BufWritePre * :%s/\s\+$//e  " automatically remove trailing whitespace on writing
