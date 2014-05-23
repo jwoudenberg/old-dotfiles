@@ -6,7 +6,7 @@ source /usr/share/git/completion/git-completion.bash
 source /usr/share/git/completion/git-prompt.sh
 
 # set path
-PATH="${PATH}:/home/jasper/scripts:/home/jasper/.cabal/bin"
+PATH="${PATH}:/home/jasper/scripts:/home/jasper/.cabal/bin:/home/jasper/.npm-global/bin"
 
 # Set vim-keybindings
 set -o vi
