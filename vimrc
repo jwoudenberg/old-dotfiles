@@ -20,10 +20,11 @@ set splitbelow              " add new splits below current window
 set splitright              " add new splits to the right of current window
 set scrolloff=1             " always keep a line above and below the cursor
 set incsearch               " highlight search term while typing
+set hlsearch                " Highlight search results
 set history=1000            " remember more old commands
 
 let mapleader=" "
-let g:nerdtree_tabs_open_on_gui_startup=0   " do not automatically open NERDTreeTabs
+let g:delimitMate_expand_cr=1               " expand enters
 let g:airline_powerline_fonts=1             " automatically add airline symbols
 let g:airline_theme="powerlineish"          " airline theme
 let g:JSHintUpdateWriteOnly=1               " update jshint only when writing

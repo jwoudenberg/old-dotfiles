@@ -50,3 +50,7 @@
 	path = vim/bundle/fugitive
 	url = https://github.com/tpope/vim-fugitive.git
 	branch = master
+[submodule "vim/bundle/vim-mustache-handlebars"]
+	path = vim/bundle/vim-mustache-handlebars
+	url = https://github.com/mustache/vim-mustache-handlebars.git
+	branch = master
