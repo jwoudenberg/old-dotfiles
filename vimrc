@@ -1,6 +1,7 @@
 execute pathogen#infect()
 execute pathogen#helptags()
 filetype plugin indent on   " enables filetype detection
+runtime! macros/matchit.vim " enable matchit
 
 syntax on                   " syntax highlighting
 colorscheme molokai
