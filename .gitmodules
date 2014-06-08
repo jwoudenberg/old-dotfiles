@@ -58,3 +58,7 @@
 	path = vim/bundle/vim-node
 	url = git@github.com:moll/vim-node.git
 	branch = master
+[submodule "vim/bundle/vim-javascript"]
+	path = vim/bundle/vim-javascript
+	url = git@github.com:pangloss/vim-javascript.git
+	branch = master
