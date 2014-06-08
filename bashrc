@@ -21,4 +21,4 @@ alias gitl='git log --graph --format=format:"%C(bold blue)%h%C(reset) - %C(bold 
 alias chrome='google-chrome-stable'
 
 # start x
-[[ -z $display && $xdg_vtnr -eq 1 ]] && exec startx
+[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx
