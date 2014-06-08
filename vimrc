@@ -6,7 +6,7 @@ runtime! macros/matchit.vim " enable matchit
 syntax on                   " syntax highlighting
 colorscheme molokai
 
-set guifont=Sauce\ Code\ Powerline\ 9
+set guifont=Sauce\ Code\ Powerline\ 10
 set omnifunc=syntaxcomplete#Complete " Enable omni-completion
 set completeopt-=preview    " do not show preview window when auto-completing
 set laststatus=2            " always display the statusline in all windows
