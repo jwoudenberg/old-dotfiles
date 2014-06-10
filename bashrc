@@ -22,3 +22,6 @@ alias chrome='google-chrome-stable'
 
 # start x
 [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx
+
+# start tmux
+[[ -z "$TMUX" ]] && exec tmux
