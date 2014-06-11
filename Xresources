@@ -1,5 +1,14 @@
 xterm*termName: xterm-256color
 
+! Set default behaviour for del and backspace.
+! Explained here: http://www.ibb.net/~anne/keyboard/keyboard.html
+*VT100.Translations: #override \
+    <Key>BackSpace: string(0x7F)\n\
+    <Key>Delete:    string("\033[3~")\n\
+    <Key>Home:      string("\033[1~")\n\
+    <Key>End:       string("\033[4~")
+*ttyModes: erase ^?
+
 xterm*faceName: Sauce Code Powerline:size=10:antialias=true
 xterm*font: 7x13
 
