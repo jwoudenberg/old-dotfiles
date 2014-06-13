@@ -78,3 +78,8 @@
 	url = git@github.com:pangloss/vim-javascript.git
 	branch = master
     ignore = dirty
+[submodule "vim/bundle/vim-json"]
+	path = vim/bundle/vim-json
+	url = git@github.com:leshill/vim-json.git
+	branch = master
+    ignore = dirty
