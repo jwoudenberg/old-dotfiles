@@ -83,3 +83,8 @@
 	url = git@github.com:leshill/vim-json.git
 	branch = master
     ignore = dirty
+[submodule "vim/bundle/editorconfig-vim"]
+	path = vim/bundle/editorconfig-vim
+	url = git@github.com:editorconfig/editorconfig-vim.git
+	branch = master
+    ignore = dirty
