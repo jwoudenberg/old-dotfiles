@@ -88,3 +88,8 @@
 	url = git@github.com:editorconfig/editorconfig-vim.git
 	branch = master
     ignore = dirty
+[submodule "vim/bundle/unimpaired.vim"]
+	path = vim/bundle/unimpaired.vim
+	url = git@github.com:tpope/vim-unimpaired.git
+	branch = master
+    ignore = dirty
