@@ -49,6 +49,9 @@ nnoremap <C-H> <C-W><C-H>
 nnoremap <silent> <leader>c :nohlsearch<CR>
 map <Leader> <Plug>(easymotion-prefix)
 " }}}
+" Mouse {{{
+set mouse=a
+" }}}
 " Hooks {{{
 autocmd BufWritePre * :%s/\s\+$//e  " automatically remove trailing whitespace on writing
 " }}}
