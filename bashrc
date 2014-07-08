@@ -19,6 +19,7 @@ alias xclip='xclip -selection clipboard'
 alias gim='gvim'
 alias gitl='git log --graph --format=format:"%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold white)— %an%C(reset)%C(bold yellow)%d%C(reset)" --abbrev-commit --date=relative'
 alias chrome='google-chrome-stable'
+alias ll='ls --color=auto -Flh'
 
 # start x
 [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx
