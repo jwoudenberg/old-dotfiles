@@ -93,3 +93,8 @@
 	url = git@github.com:tpope/vim-unimpaired.git
 	branch = master
     ignore = dirty
+[submodule "vim/bundle/vim-abolish"]
+	path = vim/bundle/vim-abolish
+	url = git@github.com:tpope/vim-abolish.git
+	branch = master
+    ignore = dirty
