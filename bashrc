@@ -31,4 +31,4 @@ alias la='ls -lAXh --color=always'
 [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx
 
 # start tmux
-[[ -z "$TMUX" ]] && exec tmux
+# [[ -z "$TMUX" ]] && exec tmux
