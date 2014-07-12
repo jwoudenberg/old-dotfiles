@@ -5,6 +5,9 @@ export PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w\[\033[31m\] $(__git_ps1)\n\[\
 source /usr/share/git/completion/git-completion.bash
 source /usr/share/git/completion/git-prompt.sh
 
+# Load a local configuration
+[ -f ~/.localrc ] && source ~/.localrc
+
 # set path
 PATH="${PATH}:/home/jasper/scripts:/home/jasper/.cabal/bin:/home/jasper/.npm-global/bin"
 
