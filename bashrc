@@ -9,7 +9,7 @@ source /usr/share/git/completion/git-prompt.sh
 [ -f ~/.localrc ] && source ~/.localrc
 
 # set path
-export PATH="${PATH}:/home/jasper/scripts:/home/jasper/.cabal/bin:/home/jasper/.npm-global/bin"
+export PATH="${PATH}:/home/jasper/scripts:/home/jasper/.cabal/bin:/home/jasper/.npm-global/bin:/home/jasper/.gem/ruby/2.1.0/bin"
 export EDITOR=vim xterm
 
 # Set vim-keybindings
