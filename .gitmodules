@@ -103,3 +103,8 @@
 	url = git@github.com:mileszs/ack.vim.git
 	branch = master
     ignore = dirty
+[submodule "vim/bundle/vim-repeat"]
+	path = vim/bundle/vim-repeat
+	url = git@github.com:tpope/vim-repeat.git
+	branch = master
+    ignore = dirty
