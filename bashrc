@@ -29,3 +29,12 @@ alias la='ls -lAXh --color=always'
 
 # start x
 [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx
+
+# {{{
+# Node Completion - Auto-generated, do not touch.
+shopt -s progcomp
+for f in $(command ls ~/.node-completion); do
+  f="$HOME/.node-completion/$f"
+  test -f "$f" && . "$f"
+done
+# }}}

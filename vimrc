@@ -38,6 +38,7 @@ let g:airline#extensions#tabline#enabled=1      " use airline tabs
 let g:airline_theme="powerlineish"              " airline theme
 let g:JSHintUpdateWriteOnly=1                   " update jshint only when writing
 let g:SuperTabDefaultCompletionType="context"   " SuperTab decides which type of completion to use
+let g:fist_anonymously=0                        " Gists are published under my name
 " }}}
 " Keyboard {{{
 " Easy movement between windows

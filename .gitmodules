@@ -98,3 +98,8 @@
 	url = git@github.com:tpope/vim-abolish.git
 	branch = master
     ignore = dirty
+[submodule "vim/bundle/vim-fist"]
+	path = vim/bundle/vim-fist
+	url = git@github.com:ajh17/vim-fist.git
+	branch = master
+    ignore = dirty
