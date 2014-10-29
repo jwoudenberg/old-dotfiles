@@ -50,6 +50,9 @@ nnoremap <C-H> <C-W><C-H>
 " Clear highlighted search results
 nnoremap <silent> <leader>c :nohlsearch<CR>
 map <Leader> <Plug>(easymotion-prefix)
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
 " }}}
 " Mouse {{{
 set mouse=a
