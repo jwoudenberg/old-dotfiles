@@ -7,6 +7,7 @@ filetype plugin indent on   " enables filetype detection
 runtime! macros/matchit.vim " enable matchit
 syntax on                   " syntax highlighting
 au BufRead,BufNewFile *.md set filetype=markdown " read md files as markdown
+set ttyfast
 " }}}
 " Style {{{
 colorscheme molokai
