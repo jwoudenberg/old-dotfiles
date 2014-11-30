@@ -39,6 +39,7 @@ let g:airline_theme="powerlineish"              " airline theme
 let g:JSHintUpdateWriteOnly=1                   " update jshint only when writing
 let g:SuperTabDefaultCompletionType="context"   " SuperTab decides which type of completion to use
 let g:fist_anonymously=0                        " Gists are published under my name
+let g:js_context_colors_enabled=0               " Context colors are off by default
 " }}}
 " Keyboard {{{
 " Easy movement between windows
