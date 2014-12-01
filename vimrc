@@ -45,6 +45,7 @@ let g:js_context_colors_enabled=0               " Context colors are off by defa
 " Keyboard {{{
 " Easy movement between windows
 let mapleader=" "
+let maplocalleader="\\"
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
@@ -55,6 +56,7 @@ map <Leader> <Plug>(easymotion-prefix)
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
+map <Leader>m :call LivedownPreview()<CR>
 " }}}
 " Mouse {{{
 set mouse=a
