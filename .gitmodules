@@ -133,3 +133,8 @@
 	url = git@github.com:shime/vim-livedown.git
 	branch = master
     ignore = dirty
+[submodule "vim/bundle/conoline.vim"]
+	path = vim/bundle/conoline.vim
+	url = git@github.com:miyakogi/conoline.vim.git
+	branch = master
+    ignore = dirty

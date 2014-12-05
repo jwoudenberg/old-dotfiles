@@ -12,6 +12,7 @@ set ttyfast
 " Style {{{
 colorscheme molokai
 set guifont=Sauce\ Code\ Powerline\ 10
+set background=dark
 " }}}
 " Text editing defaults {{{
 set omnifunc=syntaxcomplete#Complete " Enable omni-completion
