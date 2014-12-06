@@ -1,3 +1,4 @@
 *.swp
 aria2/dht.dat
 vim/.netrwhist
+vim/plugged

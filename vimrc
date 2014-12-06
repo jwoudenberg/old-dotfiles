@@ -32,14 +32,43 @@ set hlsearch                " Highlight search results
 set history=1000            " remember more old commands
 " }}}
 " Plugins {{{
+call plug#begin('~/.vim/plugged')               " start plugin manager
+Plug 'mileszs/ack.vim'                          " Grep alternative
+Plug 'miyakogi/conoline.vim'                    " Hightlights active line
+Plug 'kien/ctrlp.vim'                           " Fuzzy file searcher
+Plug 'Raimondi/delimitMate'                     " Automatic bracker closing
+Plug 'editorconfig/editorconfig-vim'            " Settings based on .editorconfig file
+Plug 'tpope/vim-fugitive'                       " GIT integration
+Plug 'haya14busa/incsearch.vim'                 " Improved incremental searching
+Plug 'ervandew/supertab'                        " Tab completion
+Plug 'scrooloose/syntastic'                     " Syntax checking
+Plug 'godlygeek/tabular'                        " Table formatting
+Plug 'marijnh/tern_for_vim', { 'do': 'npm install' }    " JS code analysis
+Plug 'tpope/vim-unimpaired'                     " Miscellaneous commands
+Plug 'tpope/vim-abolish'                        " Working with variants of a world
+Plug 'bling/vim-airline'                        " Hip status bar
+Plug 'tpope/vim-commentary'                     " (Un)commenting lines
+Plug 'Lokaltog/vim-easymotion'                  " Additional motions
+Plug 'ajh17/vim-fist'                           " Easy creation of Github gists
+Plug 'airblade/vim-gitgutter'                   " Column with line changes
+Plug 'pangloss/vim-javascript'                  " Better javascript support
+Plug 'bigfish/vim-js-context-coloring', { 'do': 'npm install', 'on': 'JSContextColor' }     " Context coloring for javascript
+Plug 'leshill/vim-json'                         " Better JSON support
+Plug 'shime/vim-livedown', { 'do': 'npm install -g livedown' }  " Live markdown parsing
+Plug 'terryma/vim-multiple-cursors'             " Sublime-like multiple cursors
+Plug 'mustache/vim-mustache-handlebars'         " Better support for mustache and handlebars files.
+Plug 'moll/vim-node'                            " Better support for node modules
+Plug 'tpope/vim-repeat'                         " Use dot operator with plugins
+Plug 'tpope/vim-surround'                       " Commands to work with surroundings
+Plug 'tpope/vim-vinegar'                        " Directory overview in a panel
+call plug#end()
+
 let g:delimitMate_expand_cr=1                   " expand enters
+let g:SuperTabDefaultCompletionType="context"   " SuperTab decides which type of completion to use
 let g:airline_powerline_fonts=1                 " automatically add airline symbols
 let g:airline#extensions#tabline#enabled=1      " use airline tabs
 let g:airline_theme="powerlineish"              " airline theme
-let g:JSHintUpdateWriteOnly=1                   " update jshint only when writing
-let g:SuperTabDefaultCompletionType="context"   " SuperTab decides which type of completion to use
 let g:fist_anonymously=0                        " Gists are published under my name
-let g:js_context_colors_enabled=0               " Context colors are off by default
 " }}}
 " Keyboard {{{
 " Easy movement between windows
