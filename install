@@ -10,6 +10,7 @@ var linkMap = {
     '~/.local/share/fonts'  : 'fonts',
     '~/.gitconfig'          : 'gitconfig',
     '~/.jshintrc'           : 'jshintrc',
+    '~/.eslintrc'           : 'eslintrc',
     '~/.vim'                : 'vim',
     '~/.vimrc'              : 'vimrc',
     '~/.xinitrc'            : 'xinitrc',

@@ -42,6 +42,7 @@ Plug 'tpope/vim-fugitive'                       " GIT integration
 Plug 'haya14busa/incsearch.vim'                 " Improved incremental searching
 Plug 'ervandew/supertab'                        " Tab completion
 Plug 'scrooloose/syntastic'                     " Syntax checking
+let g:syntastic_javascript_checkers = ['eslint']    " Check js files with eslint
 Plug 'godlygeek/tabular'                        " Table formatting
 Plug 'marijnh/tern_for_vim', { 'do': 'npm install' }    " JS code analysis
 Plug 'tpope/vim-unimpaired'                     " Miscellaneous commands
