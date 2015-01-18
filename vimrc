@@ -51,8 +51,8 @@ Plug 'tpope/vim-commentary'                     " (Un)commenting lines
 Plug 'Lokaltog/vim-easymotion'                  " Additional motions
 Plug 'ajh17/vim-fist'                           " Easy creation of Github gists
 Plug 'airblade/vim-gitgutter'                   " Column with line changes
+Plug 'bigfish/vim-js-context-coloring', { 'do': 'npm install' }     " Context coloring for javascript
 Plug 'pangloss/vim-javascript'                  " Better javascript support
-Plug 'bigfish/vim-js-context-coloring', { 'do': 'npm install', 'on': 'JSContextColor' }     " Context coloring for javascript
 Plug 'leshill/vim-json'                         " Better JSON support
 Plug 'shime/vim-livedown', { 'do': 'npm install -g livedown' }  " Live markdown parsing
 Plug 'terryma/vim-multiple-cursors'             " Sublime-like multiple cursors
@@ -63,6 +63,7 @@ Plug 'tpope/vim-surround'                       " Commands to work with surround
 Plug 'tpope/vim-vinegar'                        " Directory overview in a panel
 call plug#end()
 
+let g:js_context_colors_enabled=0
 let g:syntastic_javascript_checkers = ['eslint']    " Check js files with eslint
 let g:delimitMate_expand_cr=1                   " expand enters
 let g:SuperTabDefaultCompletionType="context"   " SuperTab decides which type of completion to use
@@ -81,11 +82,12 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 " Clear highlighted search results
 nnoremap <silent> <leader>c :nohlsearch<CR>
-map <Leader> <Plug>(easymotion-prefix)
-map /  <Plug>(incsearch-forward)
-map ?  <Plug>(incsearch-backward)
-map g/ <Plug>(incsearch-stay)
-map <Leader>m :call LivedownPreview()<CR>
+map <leader> <plug>(easymotion-prefix)
+map /  <plug>(incsearch-forward)
+map ?  <plug>(incsearch-backward)
+map g/ <plug>(incsearch-stay)
+map <localleader>m :call LivedownPreview()<CR>
+map <localleader>c :JSContextColorToggle<CR>
 " }}}
 " Mouse {{{
 set mouse=a
