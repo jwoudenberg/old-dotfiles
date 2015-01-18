@@ -42,7 +42,6 @@ Plug 'tpope/vim-fugitive'                       " GIT integration
 Plug 'haya14busa/incsearch.vim'                 " Improved incremental searching
 Plug 'ervandew/supertab'                        " Tab completion
 Plug 'scrooloose/syntastic'                     " Syntax checking
-let g:syntastic_javascript_checkers = ['eslint']    " Check js files with eslint
 Plug 'godlygeek/tabular'                        " Table formatting
 Plug 'marijnh/tern_for_vim', { 'do': 'npm install' }    " JS code analysis
 Plug 'tpope/vim-unimpaired'                     " Miscellaneous commands
@@ -64,6 +63,7 @@ Plug 'tpope/vim-surround'                       " Commands to work with surround
 Plug 'tpope/vim-vinegar'                        " Directory overview in a panel
 call plug#end()
 
+let g:syntastic_javascript_checkers = ['eslint']    " Check js files with eslint
 let g:delimitMate_expand_cr=1                   " expand enters
 let g:SuperTabDefaultCompletionType="context"   " SuperTab decides which type of completion to use
 let g:airline_powerline_fonts=1                 " automatically add airline symbols
