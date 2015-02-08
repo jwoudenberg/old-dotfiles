@@ -33,9 +33,9 @@ set history=1000            " remember more old commands
 " }}}
 " Plugins {{{
 call plug#begin('~/.vim/plugged')               " start plugin manager
-Plug 'mileszs/ack.vim'                          " Grep alternative
 Plug 'miyakogi/conoline.vim'                    " Hightlights active line
 Plug 'kien/ctrlp.vim'                           " Fuzzy file searcher
+Plug 'rking/ag.vim'                             " Fast grep replacement
 Plug 'Raimondi/delimitMate'                     " Automatic bracker closing
 Plug 'editorconfig/editorconfig-vim'            " Settings based on .editorconfig file
 Plug 'tpope/vim-fugitive'                       " GIT integration
@@ -71,6 +71,10 @@ let g:airline_powerline_fonts=1                 " automatically add airline symb
 let g:airline#extensions#tabline#enabled=1      " use airline tabs
 let g:airline_theme="powerlineish"              " airline theme
 let g:fist_anonymously=0                        " Gists are published under my name
+let g:ctrlp_custom_ignore = '\.git$\|node_modules'
+if executable('ag')
+    let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+endif
 " }}}
 " Keyboard {{{
 " Easy movement between windows
