@@ -61,6 +61,7 @@ Plug 'moll/vim-node'                            " Better support for node module
 Plug 'tpope/vim-repeat'                         " Use dot operator with plugins
 Plug 'tpope/vim-surround'                       " Commands to work with surroundings
 Plug 'tpope/vim-vinegar'                        " Directory overview in a panel
+Plug 'evanmiller/nginx-vim-syntax'              " Syntax highlighting for nginx files
 call plug#end()
 
 let g:js_context_colors_enabled=0
