@@ -32,6 +32,13 @@ alias la='ls -lAXh --color=always'
 alias vimrc='$EDITOR ~/.vimrc'
 alias bashrc='$EDITOR ~/.bashrc'
 
+# shell function that creates a quick experiment directory.
+exp() {
+    path="$HOME/tmp/experiments/$1"
+    mkdir -p $path
+    cd $path
+}
+
 # start x
 [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx
 
