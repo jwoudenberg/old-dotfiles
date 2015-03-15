@@ -5,17 +5,18 @@ var format = require('util').format;
 
 //Keys are paths, values files in ./dotfiles that will be mapped there.
 var linkMap = {
-    '~/.bashrc'             : 'bashrc',
-    '~/.bash_profile'       : 'bash_profile',
-    '~/.local/share/fonts'  : 'fonts',
-    '~/.gitconfig'          : 'gitconfig',
-    '~/.jshintrc'           : 'jshintrc',
-    '~/.eslintrc'           : 'eslintrc',
-    '~/.vim'                : 'vim',
-    '~/.vimrc'              : 'vimrc',
-    '~/.xinitrc'            : 'xinitrc',
-    '~/.xmodmap'            : 'xmodmap',
-    '~/.Xresources'         : 'Xresources'
+    '~/.bashrc':                    'bashrc',
+    '~/.bash_profile':              'bash_profile',
+    '~/.local/share/fonts':         'fonts',
+    '~/.gitconfig':                 'gitconfig',
+    '~/.jshintrc':                  'jshintrc',
+    '~/.eslintrc':                  'eslintrc',
+    '~/.vim':                       'vim',
+    '~/.vimrc':                     'vimrc',
+    '~/.xinitrc':                   'xinitrc',
+    '~/.xmodmap':                   'xmodmap',
+    '~/.Xresources':                'Xresources',
+    '~/.config/awesome/rc.lua':     'awesome-rc.lua'
 };
 
 var paths = Object.keys(linkMap);
