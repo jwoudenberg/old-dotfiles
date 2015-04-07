@@ -36,7 +36,7 @@ call plug#begin('~/.vim/plugged')                               " start plugin m
 Plug 'miyakogi/conoline.vim'                                    " Hightlights active line
 Plug 'kien/ctrlp.vim'                                           " Fuzzy file searcher
 Plug 'rking/ag.vim'                                             " Fast grep replacement
-Plug 'Raimondi/delimitMate'                                     " Automatic bracker closing
+Plug 'jiangmiao/auto-pairs'                                     " Automatic bracket closing
 Plug 'editorconfig/editorconfig-vim'                            " Settings based on .editorconfig file
 Plug 'tpope/vim-fugitive'                                       " GIT integration
 Plug 'haya14busa/incsearch.vim'                                 " Improved incremental searching
@@ -53,6 +53,7 @@ Plug 'ajh17/vim-fist'                                           " Easy creation 
 Plug 'airblade/vim-gitgutter'                                   " Column with line changes
 Plug 'bigfish/vim-js-context-coloring', { 'do': 'npm install' } " Context coloring for javascript
 Plug 'pangloss/vim-javascript'                                  " Better javascript support
+Plug 'mxw/vim-jsx'                                              " Hightlight JSX
 Plug 'leshill/vim-json'                                         " Better JSON support
 Plug 'shime/vim-livedown', { 'do': 'npm install -g livedown' }  " Live markdown parsing
 Plug 'terryma/vim-multiple-cursors'                             " Sublime-like multiple cursors
@@ -66,8 +67,8 @@ Plug 'vim-scripts/syntaxudev.vim'                               " Syntax highlig
 call plug#end()
 
 let g:js_context_colors_enabled=0                               " Do no use js context colors by default
+let g:jsx_ext_required=0                                        " Highlight jsx in .js files
 let g:syntastic_javascript_checkers = ['eslint']                " Check js files with eslint
-let g:delimitMate_expand_cr=1                                   " expand enters
 let g:SuperTabDefaultCompletionType="context"                   " SuperTab decides which type of completion to use
 let g:airline_powerline_fonts=1                                 " automatically add airline symbols
 let g:airline#extensions#tabline#enabled=1                      " use airline tabs
