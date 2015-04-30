@@ -49,6 +49,7 @@ Plug 'tpope/vim-abolish'                                        " Working with v
 Plug 'bling/vim-airline'                                        " Hip status bar
 Plug 'tpope/vim-commentary'                                     " (Un)commenting lines
 Plug 'Lokaltog/vim-easymotion'                                  " Additional motions
+Plug 'justinmk/vim-sneak'                                       " Two-letter alternative to 'f'
 Plug 'ajh17/vim-fist'                                           " Easy creation of Github gists
 Plug 'airblade/vim-gitgutter'                                   " Column with line changes
 Plug 'bigfish/vim-js-context-coloring', { 'do': 'npm install' } " Context coloring for javascript
@@ -97,6 +98,8 @@ map ?  <plug>(incsearch-backward)
 map g/ <plug>(incsearch-stay)
 map <localleader>m :call LivedownPreview()<CR>
 map <localleader>c :JSContextColorToggle<CR>
+" Abbreviations
+ab fn function
 " }}}
 " Mouse {{{
 set mouse=a
