@@ -14,6 +14,7 @@ shopt -s globstar
 # set path
 export PATH="${PATH}:./node_modules/.bin:/home/jasper/scripts:/home/jasper/.cabal/bin:/home/jasper/.npm-global/bin:/home/jasper/.gem/ruby/2.2.0/bin"
 export EDITOR=vim xterm
+export BROWSER=/usr/bin/chromium
 
 # Set vim-keybindings
 set -o vi
