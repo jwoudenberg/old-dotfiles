@@ -91,6 +91,7 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 " Clear highlighted search results
+nnoremap <C-B> :CtrlPBuffer<CR>
 nnoremap <silent> <leader>c :nohlsearch<CR>
 map <leader> <plug>(easymotion-prefix)
 map /  <plug>(incsearch-forward)
