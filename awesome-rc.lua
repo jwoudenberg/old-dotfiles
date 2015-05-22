@@ -267,6 +267,8 @@ awful.rules.rules = {
     { rule = { }, properties = { }, callback = awful.client.setslave },
     { rule = { class = "Chromium" },
       properties = { tag = tags[1][2] } },
+    { rule = { class = "Firefox" },
+      properties = { tag = tags[1][2] } },
     { rule = { class = "Pavucontrol" },
       properties = { tag = tags[1][9] } },
     { rule = { class = "MPlayer" },
