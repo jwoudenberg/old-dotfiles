@@ -9,9 +9,11 @@ au BufRead,BufNewFile *.sjs set filetype=javascript " read sweet.js macro files 
 set ttyfast
 " }}}
 " Style {{{
-colorscheme molokai
 set guifont=Sauce\ Code\ Powerline\ 10
-set background=dark
+" colorscheme molokai
+" set background=dark
+set background=light
+colorscheme PaperColor
 " }}}
 " Text editing defaults {{{
 set omnifunc=syntaxcomplete#Complete " Enable omni-completion
@@ -34,7 +36,6 @@ set history=1000            " remember more old commands
 " }}}
 " Plugins {{{
 call plug#begin('~/.vim/plugged')                               " start plugin manager
-Plug 'miyakogi/conoline.vim'                                    " Hightlights active line
 Plug 'kien/ctrlp.vim'                                           " Fuzzy file searcher
 Plug 'rking/ag.vim'                                             " Fast grep replacement
 Plug 'jiangmiao/auto-pairs'                                     " Automatic bracket closing
@@ -74,7 +75,7 @@ let g:syntastic_javascript_checkers = ['eslint']                " Check js files
 let g:SuperTabDefaultCompletionType="context"                   " SuperTab decides which type of completion to use
 let g:airline_powerline_fonts=1                                 " automatically add airline symbols
 let g:airline#extensions#tabline#enabled=1                      " use airline tabs
-let g:airline_theme="powerlineish"                              " airline theme
+let g:airline_theme="papercolor"                                " airline theme
 let g:fist_anonymously=0                                        " Gists are published under my name
 let g:ctrlp_custom_ignore = '\.git$\|node_modules'              " skip directories in ctrlp indexing
 let g:EditorConfig_exclude_patterns = ['.git/COMMIT_EDITMSG']   " in commit message, do not use editorconfig plugin
