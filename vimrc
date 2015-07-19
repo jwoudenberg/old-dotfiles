@@ -10,8 +10,6 @@ set ttyfast
 " }}}
 " Style {{{
 set guifont=Sauce\ Code\ Powerline\ 10
-" colorscheme molokai
-" set background=dark
 set background=light
 colorscheme PaperColor
 " }}}
