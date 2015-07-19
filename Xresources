@@ -7,6 +7,7 @@ xterm*font: 7x13
 ! Monokai
 xterm*background: #101010
 xterm*foreground: #FEFEFE
+xterm*cursorColor: #000000
 xterm*color0: #1C1D19
 xterm*color1: #D01B24
 xterm*color2: #A7D32C
