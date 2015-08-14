@@ -16,7 +16,9 @@ var linkMap = {
     '~/.xinitrc':                   'xinitrc',
     '~/.xmodmap':                   'xmodmap',
     '~/.Xresources':                'Xresources',
-    '~/.config/awesome/rc.lua':     'awesome-rc.lua'
+    '~/.config/awesome/rc.lua':     'awesome-rc.lua',
+    '~/.config/fish/config.fish':   'config.fish',
+    '~/.config/fish/functions':     'fish-functions'
 };
 
 var paths = Object.keys(linkMap);

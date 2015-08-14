@@ -7,6 +7,7 @@ syntax on                   " syntax highlighting
 au BufRead,BufNewFile *.md set filetype=markdown " read md files as markdown
 au BufRead,BufNewFile *.sjs set filetype=javascript " read sweet.js macro files as javascript
 set ttyfast
+set shell=/bin/bash         " required by gitgutter plugin
 " }}}
 " Style {{{
 set guifont=Sauce\ Code\ Powerline\ 10
