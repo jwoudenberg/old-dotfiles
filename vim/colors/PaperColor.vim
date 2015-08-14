@@ -9,12 +9,24 @@ hi clear
 syntax reset
 let g:colors_name = "PaperColor"
 
+fun! s:Load_Settings_Override(custom)
+  if has_key(a:custom, 'cursorline')
+    let s:cursorline = a:custom['cursorline']
+  endif
+  if has_key(a:custom, 'background')
+    let s:background = a:custom['background']
+  endif
+  if has_key(a:custom, 'matchparen')
+    let s:matchparen = a:custom['matchparen']
+  endif
+endfun
+
 let s:is_dark=(&background == 'dark')
 
 if s:is_dark " DARK VARIANT
   " Palette: These color names are corresponding to the original light version,
   "          and they don't represent the HEX code that they store in this block.
-  let s:red     = "#00af5f" "Include/Exception
+  let s:red     = "#5faf5f" "Include/Exception
   let s:green   = "#dfaf00" "Boolean/Special
   let s:blue    = "#00afaf" "Keyword
 
@@ -30,15 +42,16 @@ if s:is_dark " DARK VARIANT
   let s:foreground   = "#d0d0d0"
   let s:background   = "#262626"
   let s:selection    = "#3a3a3a"
-  let s:nontext      = "#585858"
+  let s:nontext      = "#444444"
   let s:window       = "#3a3a3a"
   let s:divider      = "#5f8787"
   let s:linenumber   = "#606060"
   let s:comment      = "#5f875f"
-  let s:todo         = "#df005f"
-  let s:cursorline   = "#444444"
+  let s:todo         = "#ff8700"
+  let s:cursorline   = "#303030"
   let s:cursorcolumn = "#303030"
   let s:error        = "#5f0000"
+  let s:matchparen   = "#3a3a3a"
 
   " Spelling:
   let s:spellbad   = "#5f0000"
@@ -57,7 +70,7 @@ if s:is_dark " DARK VARIANT
   let s:statusline_active_fg   = "#1c1c1c"
   let s:statusline_active_bg   = "#5f8787"
   let s:statusline_inactive_fg = "#c6c6c6"
-  let s:statusline_inactive_bg = "#303030"
+  let s:statusline_inactive_bg = "#444444"
 
   " Search:
   let s:search_fg = "#000000"
@@ -68,8 +81,8 @@ if s:is_dark " DARK VARIANT
   let s:visual_bg = "#8787af"
 
   " Folded:
-  let s:folded_fg = "#000000"
-  let s:folded_bg = "#875f87"
+  let s:folded_fg = "#afdf00"
+  let s:folded_bg = "#444444"
 
   " Diff:
   let s:diffadd_fg    = "#000000"
@@ -85,8 +98,17 @@ if s:is_dark " DARK VARIANT
   let s:diffchange_bg = "#dfaf00"
 
   " User Custom:
+  " TODO: Deprecate this in September, 2015 {{{
   if exists("g:PaperColor_Dark_CursorLine")
     let s:cursorline = g:PaperColor_Dark_CursorLine
+    echo 'Message from PaperColor.vim: g:PaperColor_Dark_CursorLine variable will be deprecated'
+    echo 'See http://github.com/NLKNguyen/papercolor-theme for better option'
+  endif
+  " }}}
+
+  " Override Settings:
+  if exists("g:PaperColor_Dark_Override")
+    call s:Load_Settings_Override(g:PaperColor_Dark_Override)
   endif
 
 else " LIGHT VARIANT
@@ -117,6 +139,7 @@ else " LIGHT VARIANT
   let s:cursorline   = "#eeeeee"
   let s:cursorcolumn = "#efefef"
   let s:error        = "#ffafdf"
+  let s:matchparen   = "#d6d6d6"
 
   " Spelling:
   let s:spellbad   = "#ffafdf"
@@ -147,7 +170,7 @@ else " LIGHT VARIANT
 
   " Folded:
   let s:folded_fg = s:navy
-  let s:folded_bg = "#dfdfff"
+  let s:folded_bg = "#afdfff"
 
   " Diff:
   let s:diffadd_fg    = ""
@@ -163,8 +186,17 @@ else " LIGHT VARIANT
   let s:diffchange_bg = "#ffffaf"
 
   " User Custom:
+  " TODO: Deprecate this in September, 2015 {{{
   if exists("g:PaperColor_Light_CursorLine")
     let s:cursorline = g:PaperColor_Light_CursorLine
+    echo 'Message from PaperColor.vim: g:PaperColor_Light_CursorLine variable will be deprecated'
+    echo 'See http://github.com/NLKNguyen/papercolor-theme for better option'
+  endif
+  " }}}
+
+  " Override Settings:
+  if exists("g:PaperColor_Light_Override")
+    call s:Load_Settings_Override(g:PaperColor_Light_Override)
   endif
 
 endif
@@ -406,7 +438,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
   call <SID>X("MoreMsg", s:olive, "", "")
   call <SID>X("Question", s:olive, "", "")
   call <SID>X("WarningMsg", s:pink, "", "")
-  call <SID>X("MatchParen", "", s:selection, "")
+  call <SID>X("MatchParen", "", s:matchparen, "")
   call <SID>X("Folded", s:folded_fg, s:folded_bg, "")
   call <SID>X("FoldColumn", "", s:background, "")
   if version >= 700
@@ -618,6 +650,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
   call <SID>X("shSnglCase", s:purple, "", "none")
   call <SID>X("shFunctionOne", s:navy, "", "")
   call <SID>X("shCase", s:navy, "", "")
+  " @see Dockerfile Highlighting section for more sh*
 
   " HTML Highlighting
   call <SID>X("htmlTitle", s:green, "", "bold")
@@ -625,9 +658,11 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
   call <SID>X("htmlH2", s:aqua, "", "bold")
   call <SID>X("htmlH3", s:purple, "", "bold")
   call <SID>X("htmlH4", s:orange, "", "bold")
-  call <SID>X("htmlTag", s:pink, "", "")
+  call <SID>X("htmlTag", s:blue, "", "")
   call <SID>X("htmlTagName", s:pink, "", "")
   call <SID>X("htmlArg", s:blue, "", "")
+  call <SID>X("htmlEndTag", s:blue, "", "")
+  call <SID>X("htmlString", s:olive, "", "")
   call <SID>X("htmlScriptTag", s:pink, "", "")
   call <SID>X("htmlBold", s:foreground, "", "bold")
   call <SID>X("htmlItalic", s:comment, "", "bold")
@@ -635,13 +670,15 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
   " call <SID>X("htmlLink", s:blue, "", "bold")
   call <SID>X("htmlTagN", s:pink, "", "bold")
   call <SID>X("htmlSpecialTagName", s:orange, "", "bold")
+  call <SID>X("htmlComment", s:comment, "", "bold")
+  call <SID>X("htmlCommentPart", s:comment, "", "")
 
   " Markdown Highlighting
   call <SID>X("markdownH1", s:pink, "", "bold")
   call <SID>X("markdownBlockquote", s:pink, "", "")
   call <SID>X("markdownCodeBlock", s:purple, "", "bold")
   call <SID>X("markdownLink", s:blue, "", "bold")
-  call <SID>X("mkdCode", s:foreground, s:window, "none")
+  call <SID>X("mkdCode", s:olive, "", "none")
   call <SID>X("mkdLink", s:blue, "", "bold")
   call <SID>X("mkdURL", s:comment, "", "none")
   call <SID>X("mkdString", s:foreground, "", "none")
@@ -700,13 +737,25 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
   " call <SID>X("javascriptGlobal", s:blue, "", "")
   " call <SID>X("javascriptStatement", s:pink, "", "")
 
-  " @target: https://github.com/pangloss/vim-javascript
+  " @target https://github.com/pangloss/vim-javascript
   call <SID>X("jsFuncParens", s:blue, "", "")
   call <SID>X("jsFuncBraces", s:blue, "", "")
   call <SID>X("jsParens", s:blue, "", "")
   call <SID>X("jsBraces", s:blue, "", "")
   call <SID>X("jsNoise", s:blue, "", "")
 
+  " Json Highlighting
+  " @target https://github.com/elzr/vim-json
+  call <SID>X("jsonKeyword", s:blue, "", "")
+  call <SID>X("jsonString", s:olive, "", "")
+  call <SID>X("jsonQuote", s:comment, "", "")
+  call <SID>X("jsonNoise", s:foreground, "", "")
+  call <SID>X("jsonKeywordMatch", s:foreground, "", "")
+  call <SID>X("jsonBraces", s:foreground, "", "")
+  call <SID>X("jsonNumber", s:orange, "", "")
+  call <SID>X("jsonNull", s:purple, "", "bold")
+  call <SID>X("jsonBoolean", s:green, "", "bold")
+  call <SID>X("jsonCommentError", s:pink, s:background , "")
 
   " Go Highlighting
   call <SID>X("goDirective", s:red, "", "")
@@ -858,11 +907,12 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
   call <SID>X("phpIdentifier", s:foreground, "", "")
   call <SID>X("phpVarSelector", s:pink, "", "")
   call <SID>X("phpKeyword", s:blue, "", "")
-  " call <SID>X("phpRepeat", s:purple, "", "bold")
-  " call <SID>X("phpConditional", s:purple, "", "bold")
+  call <SID>X("phpRepeat", s:purple, "", "bold")
+  call <SID>X("phpConditional", s:purple, "", "bold")
   call <SID>X("phpStatement", s:pink, "", "")
   call <SID>X("phpAssignByRef", s:aqua, "", "bold")
-  " call <SID>X("phpSpecialFunction", s:foreground, "", "")
+  call <SID>X("phpSpecialFunction", s:blue, "", "")
+  call <SID>X("phpFunctions", s:blue, "", "")
   call <SID>X("phpComparison", s:aqua, "", "")
   call <SID>X("phpBackslashSequences", s:olive, "", "bold")
   call <SID>X("phpMemberSelector", s:blue, "", "")
@@ -898,6 +948,55 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
   call <SID>X("luaCond", s:purple, "", "bold")
   call <SID>X("luaCondEnd", s:purple, "", "")
 
+  " Clojure highlighting:
+  call <SID>X("clojureConstant", s:blue, "", "")
+  call <SID>X("clojureBoolean", s:orange, "", "")
+  call <SID>X("clojureCharacter", s:olive, "", "")
+  call <SID>X("clojureKeyword", s:pink, "", "")
+  call <SID>X("clojureNumber", s:orange, "", "")
+  call <SID>X("clojureString", s:olive, "", "")
+  call <SID>X("clojureRegexp", s:purple, "", "")
+  call <SID>X("clojureRegexpEscape", s:pink, "", "")
+  call <SID>X("clojureParen", s:aqua, "", "")
+  call <SID>X("clojureVariable", s:olive, "", "")
+  call <SID>X("clojureCond", s:blue, "", "")
+  call <SID>X("clojureDefine", s:blue, "", "bold")
+  call <SID>X("clojureException", s:red, "", "")
+  call <SID>X("clojureFunc", s:navy, "", "")
+  call <SID>X("clojureMacro", s:blue, "", "")
+  call <SID>X("clojureRepeat", s:blue, "", "")
+  call <SID>X("clojureSpecial", s:blue, "", "bold")
+  call <SID>X("clojureQuote", s:blue, "", "")
+  call <SID>X("clojureUnquote", s:blue, "", "")
+  call <SID>X("clojureMeta", s:blue, "", "")
+  call <SID>X("clojureDeref", s:blue, "", "")
+  call <SID>X("clojureAnonArg", s:blue, "", "")
+  call <SID>X("clojureRepeat", s:blue, "", "")
+  call <SID>X("clojureDispatch", s:aqua, "", "")
+
+  " Dockerfile Highlighting
+  " @target https://github.com/docker/docker/tree/master/contrib/syntax/vim
+  call <SID>X("dockerfileKeyword", s:blue, "", "")
+  call <SID>X("shDerefVar", s:purple, "", "bold")
+  call <SID>X("shOperator", s:aqua, "", "")
+  call <SID>X("shOption", s:navy, "", "")
+  call <SID>X("shLine", s:foreground, "", "")
+  call <SID>X("shWrapLineOperator", s:pink, "", "")
+
+  " NGINX Highlighting
+  " @target https://github.com/evanmiller/nginx-vim-syntax
+  call <SID>X("ngxDirectiveBlock", s:pink, "", "bold")
+  call <SID>X("ngxDirective", s:blue, "", "none")
+  call <SID>X("ngxDirectiveImportant", s:blue, "", "bold")
+  call <SID>X("ngxString", s:olive, "", "")
+  call <SID>X("ngxVariableString", s:purple, "", "")
+  call <SID>X("ngxVariable", s:purple, "", "none")
+
+  " Yaml Highlighting
+  call <SID>X("yamlBlockMappingKey", s:blue, "", "")
+  call <SID>X("yamlKeyValueDelimiter", s:pink, "", "")
+  call <SID>X("yamlBlockCollectionItemStart", s:pink, "", "")
+
   " Plugin: Netrw
   call <SID>X("netrwVersion", s:red, "", "")
   call <SID>X("netrwList", s:pink, "", "")
@@ -908,6 +1007,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
   call <SID>X("netrwClassify", s:pink, "", "")
   call <SID>X("netrwExe", s:green, "", "")
   call <SID>X("netrwSuffixes", s:comment, "", "")
+  call <SID>X("netrwTreeBar", s:linenumber, "", "")
 
   " Plugin: NERDTree
   call <SID>X("NERDTreeUp", s:comment, "", "")
@@ -938,6 +1038,17 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
   call <SID>X("SpellRare",  s:foreground, s:spellrare,  "")
   call <SID>X("SpellLocal", s:foreground, s:spelllocal, "")
 
+  " Plugin: Indent Guides
+  call <SID>X("IndentGuidesOdd", "", s:background, "")
+  call <SID>X("IndentGuidesEven", "", s:cursorline, "")
+
+  " Plugin: Startify
+  call <SID>X("StartifyFile", s:blue, "", "bold")
+  call <SID>X("StartifyPath", s:foreground, "", "")
+  call <SID>X("StartifySlash", s:navy, "", "")
+  call <SID>X("StartifyBracket", s:aqua, "", "")
+  call <SID>X("StartifySpecial", s:aqua, "", "")
+
   "=====================================================================
   " SYNTAX HIGHLIGHTING CODE BELOW THIS LINE ISN'T TESTED FOR THIS THEME
   "=====================================================================
@@ -962,30 +1073,6 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
   " call <SID>X("cucumberGivenAnd", s:blue, "", "")
 
 
-  " " Clojure "highlighting
-  " call <SID>X("clojureConstant", s:orange, "", "")
-  " call <SID>X("clojureBoolean", s:orange, "", "")
-  " call <SID>X("clojureCharacter", s:orange, "", "")
-  " call <SID>X("clojureKeyword", s:olive, "", "")
-  " call <SID>X("clojureNumber", s:orange, "", "")
-  " call <SID>X("clojureString", s:olive, "", "")
-  " call <SID>X("clojureRegexp", s:olive, "", "")
-  " call <SID>X("clojureParen", s:aqua, "", "")
-  " call <SID>X("clojureVariable", s:yellow, "", "")
-  " call <SID>X("clojureCond", s:blue, "", "")
-  " call <SID>X("clojureDefine", s:purple, "", "")
-  " call <SID>X("clojureException", s:pink, "", "")
-  " call <SID>X("clojureFunc", s:blue, "", "")
-  " call <SID>X("clojureMacro", s:blue, "", "")
-  " call <SID>X("clojureRepeat", s:blue, "", "")
-  " call <SID>X("clojureSpecial", s:purple, "", "")
-  " call <SID>X("clojureQuote", s:blue, "", "")
-  " call <SID>X("clojureUnquote", s:blue, "", "")
-  " call <SID>X("clojureMeta", s:blue, "", "")
-  " call <SID>X("clojureDeref", s:blue, "", "")
-  " call <SID>X("clojureAnonArg", s:blue, "", "")
-  " call <SID>X("clojureRepeat", s:blue, "", "")
-  " call <SID>X("clojureDispatch", s:blue, "", "")
 
   " " Scala "highlighting
   " call <SID>X("scalaKeyword", s:purple, "", "")
@@ -1048,3 +1135,4 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
   delf <SID>grey_level
   delf <SID>grey_number
 endif
+" vim: fdm=marker
