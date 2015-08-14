@@ -66,6 +66,7 @@ Plug 'tpope/vim-surround'                                       " Commands to wo
 Plug 'tpope/vim-vinegar'                                        " Directory overview in a panel
 Plug 'evanmiller/nginx-vim-syntax'                              " Syntax highlighting for nginx files
 Plug 'vim-scripts/syntaxudev.vim'                               " Syntax highlighting for udev rules files
+Plug 'dag/vim-fish'                                             " Syntax highlighting for fish files
 call plug#end()
 
 let g:js_context_colors_enabled=0                               " Do no use js context colors by default
