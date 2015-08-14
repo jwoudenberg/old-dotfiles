@@ -17,6 +17,9 @@ function nvm
     bass source ~/.nvm/nvm.sh ';' nvm $argv
 end
 
+# And run it immediately to set npm and node commands.
+nvm use current > /dev/null
+
 function fish_mode_prompt
     # overwrite the default fish_mode_prompt to show nothing.
 end
