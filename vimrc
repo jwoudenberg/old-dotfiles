@@ -49,7 +49,6 @@ Plug 'tpope/vim-unimpaired'                                     " Miscellaneous 
 Plug 'tpope/vim-abolish'                                        " Working with variants of a world
 Plug 'bling/vim-airline'                                        " Hip status bar
 Plug 'tpope/vim-commentary'                                     " (Un)commenting lines
-Plug 'Lokaltog/vim-easymotion'                                  " Additional motions
 Plug 'justinmk/vim-sneak'                                       " Two-letter alternative to 'f'
 Plug 'ajh17/vim-fist'                                           " Easy creation of Github gists
 Plug 'airblade/vim-gitgutter'                                   " Column with line changes
