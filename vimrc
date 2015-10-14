@@ -95,12 +95,15 @@ nnoremap <C-H> <C-W><C-H>
 " Clear highlighted search results
 nnoremap <C-B> :CtrlPBuffer<CR>
 nnoremap <silent> <leader>c :nohlsearch<CR>
+" Open vimrc in vertical split
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
 map <leader> <plug>(easymotion-prefix)
 map /  <plug>(incsearch-forward)
 map ?  <plug>(incsearch-backward)
 map g/ <plug>(incsearch-stay)
-map <localleader>m :call LivedownPreview()<CR>
-map <localleader>c :JSContextColorToggle<CR>
+autocmd FileType markdown nnoremap <localleader>m :LivedownToggle<CR>
+autocmd FileType javascript nnoremap <localleader>c :JSContextColorToggle<CR>
 " Abbreviations
 ab fn function
 " }}}
