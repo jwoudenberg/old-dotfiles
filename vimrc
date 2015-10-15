@@ -67,6 +67,7 @@ Plug 'evanmiller/nginx-vim-syntax'                              " Syntax highlig
 Plug 'vim-scripts/syntaxudev.vim'                               " Syntax highlighting for udev rules files
 Plug 'dag/vim-fish'                                             " Syntax highlighting for fish files
 Plug 'nelstrom/vim-visual-star-search'                          " Easily search for the selected text
+Plug 'easymotion/vim-easymotion'                                " Simple vertical movements
 call plug#end()
 
 let g:js_context_colors_enabled=0                               " Do no use js context colors by default
