@@ -1,18 +1,11 @@
 " vim:fdm=marker
 
-" Editor {{{
+" General {{{
 filetype plugin indent on   " enables filetype detection
 runtime! macros/matchit.vim " enable matchit
 syntax on                   " syntax highlighting
-au BufRead,BufNewFile *.md set filetype=markdown " read md files as markdown
-au BufRead,BufNewFile *.sjs set filetype=javascript " read sweet.js macro files as javascript
 set ttyfast
-set shell=/bin/bash         " required by gitgutter plugin
-" }}}
-" Style {{{
-set guifont=Sauce\ Code\ Powerline\ 10
-set background=light
-colorscheme PaperColor
+set backspace=2
 " }}}
 " Text editing defaults {{{
 set omnifunc=syntaxcomplete#Complete " Enable omni-completion
@@ -68,6 +61,7 @@ Plug 'vim-scripts/syntaxudev.vim'                               " Syntax highlig
 Plug 'dag/vim-fish'                                             " Syntax highlighting for fish files
 Plug 'nelstrom/vim-visual-star-search'                          " Easily search for the selected text
 Plug 'easymotion/vim-easymotion'                                " Simple vertical movements
+Plug 'NLKNguyen/papercolor-theme'                               " Nice color scheme
 call plug#end()
 
 let g:js_context_colors_enabled=0                               " Do no use js context colors by default
@@ -80,15 +74,20 @@ let g:airline_theme="papercolor"                                " airline theme
 let g:fist_anonymously=0                                        " Gists are published under my name
 let g:ctrlp_custom_ignore = '\.git$\|node_modules'              " skip directories in ctrlp indexing
 let g:EditorConfig_exclude_patterns = ['.git/COMMIT_EDITMSG']   " in commit message, do not use editorconfig plugin
+set shell=/bin/bash                                             " required by gitgutter plugin
 if executable('ag')
     let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 endif
 " }}}
-" Keyboard {{{
-" Easy movement between windows
+" Style {{{
+set guifont=Sauce\ Code\ Powerline\ 10
+set background=light
+colorscheme PaperColor
+" }}}
+" Mappings {{{
 let mapleader=" "
 let maplocalleader="\\"
-set backspace=2
+" Easy movement between windows
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
@@ -103,10 +102,15 @@ map <leader> <plug>(easymotion-prefix)
 map /  <plug>(incsearch-forward)
 map ?  <plug>(incsearch-backward)
 map g/ <plug>(incsearch-stay)
+" }}}
+" Abbreviations {{{
+ab fn function
+" }}}
+" Autocmds {{{
 autocmd FileType markdown nnoremap <localleader>m :LivedownToggle<CR>
 autocmd FileType javascript nnoremap <localleader>c :JSContextColorToggle<CR>
-" Abbreviations
-ab fn function
+autocmd BufRead,BufNewFile *.md set filetype=markdown    " read md files as markdown
+autocmd BufRead,BufNewFile *.sjs set filetype=javascript " read sweet.js macro files as javascript
 " }}}
 " Mouse {{{
 set mouse=a
