@@ -1,0 +1,27 @@
+From a90362d8888ee1d9ddcc7a66a5bc1118eb340d31 Mon Sep 17 00:00:00 2001
+From: Jasper Woudenberg <mail@jasperwoudenberg.com>
+Date: Sun, 18 Oct 2015 12:07:38 +0200
+Subject: [PATCH] Cursor inverts color.
+
+Gives the cursor block the character fg color, which the character
+itself switching to its bg color.
+---
+ st.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/st.c b/st.c
+index b2a4fff..3fcc5ea 100644
+--- a/st.c
++++ b/st.c
+@@ -3829,7 +3829,7 @@ xdrawcursor(void)
+ {
+ 	static int oldx = 0, oldy = 0;
+ 	int curx;
+-	Glyph g = {' ', ATTR_NULL, defaultbg, defaultcs}, og;
++	Glyph g = {' ', ATTR_NULL, term.line[term.c.y][term.c.x].bg, term.line[term.c.y][term.c.x].fg}, og;
+ 	int ena_sel = sel.ob.x != -1 && sel.alt == IS_SET(MODE_ALTSCREEN);
+ 	Color drawcol;
+ 
+-- 
+2.6.1
+
