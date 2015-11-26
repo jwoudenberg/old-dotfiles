@@ -11,8 +11,8 @@ set backspace=2
 set omnifunc=syntaxcomplete#Complete " Enable omni-completion
 set completeopt-=preview    " do not show preview window when auto-completing
 set laststatus=2            " always display the statusline in all windows
-set tabstop=4               " number of spaces in the tab-character
-set shiftwidth=4            " number of spaces in indent
+set tabstop=2               " number of spaces in the tab-character
+set shiftwidth=2            " number of spaces in indent
 set shiftround              " Round indent to multiples of shiftwidth.
 set expandtab               " expand a tab into spaces
 set smarttab                " remove tabs when backspacing
@@ -49,6 +49,7 @@ Plug 'bigfish/vim-js-context-coloring', { 'do': 'npm install' } " Context colori
 Plug 'pangloss/vim-javascript'                                  " Better javascript support
 Plug 'mxw/vim-jsx'                                              " Hightlight JSX
 Plug 'leshill/vim-json'                                         " Better JSON support
+Plug 'lambdatoast/elm.vim'                                      " Elm language syntac
 Plug 'shime/vim-livedown', { 'do': 'npm install -g livedown' }  " Live markdown parsing
 Plug 'terryma/vim-multiple-cursors'                             " Sublime-like multiple cursors
 Plug 'mustache/vim-mustache-handlebars'                         " Better support for mustache and handlebars files
@@ -65,7 +66,6 @@ Plug 'NLKNguyen/papercolor-theme'                               " Nice color sch
 call plug#end()
 
 let g:js_context_colors_enabled=0                               " Do no use js context colors by default
-let g:jsx_ext_required=0                                        " Highlight jsx in .js files
 let g:syntastic_javascript_checkers = ['eslint']                " Check js files with eslint
 let g:SuperTabDefaultCompletionType="context"                   " SuperTab decides which type of completion to use
 let g:airline_powerline_fonts=1                                 " automatically add airline symbols
