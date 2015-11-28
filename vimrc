@@ -28,45 +28,50 @@ set history=1000            " remember more old commands
 " }}}
 " Plugins {{{
 call plug#begin('~/.vim/plugged')                               " start plugin manager
-Plug 'kien/ctrlp.vim'                                           " Fuzzy file searcher
-Plug 'rking/ag.vim'                                             " Fast grep replacement
-Plug 'jiangmiao/auto-pairs'                                     " Automatic bracket closing
-Plug 'editorconfig/editorconfig-vim'                            " Settings based on .editorconfig file
-Plug 'tpope/vim-fugitive'                                       " GIT integration
-Plug 'haya14busa/incsearch.vim'                                 " Improved incremental searching
-Plug 'ervandew/supertab'                                        " Tab completion
-Plug 'scrooloose/syntastic'                                     " Syntax checking
-Plug 'godlygeek/tabular'                                        " Table formatting
-Plug 'marijnh/tern_for_vim', { 'do': 'npm install' }            " JS code analysis
-Plug 'tpope/vim-unimpaired'                                     " Miscellaneous commands
-Plug 'tpope/vim-abolish'                                        " Working with variants of a world
-Plug 'bling/vim-airline'                                        " Hip status bar
-Plug 'tpope/vim-commentary'                                     " (Un)commenting lines
-Plug 'justinmk/vim-sneak'                                       " Two-letter alternative to 'f'
-Plug 'ajh17/vim-fist'                                           " Easy creation of Github gists
 Plug 'airblade/vim-gitgutter'                                   " Column with line changes
+Plug 'ajh17/vim-fist'                                           " Easy creation of Github gists
 Plug 'bigfish/vim-js-context-coloring', { 'do': 'npm install' } " Context coloring for javascript
-Plug 'pangloss/vim-javascript'                                  " Better javascript support
-Plug 'mxw/vim-jsx'                                              " Hightlight JSX
-Plug 'leshill/vim-json'                                         " Better JSON support
+Plug 'bling/vim-airline'                                        " Hip status bar
+Plug 'dag/vim-fish'                                             " Syntax highlighting for fish files
+Plug 'easymotion/vim-easymotion'                                " Simple vertical movements
+Plug 'editorconfig/editorconfig-vim'                            " Settings based on .editorconfig file
+Plug 'ervandew/supertab'                                        " Tab completion
+Plug 'evanmiller/nginx-vim-syntax'                              " Syntax highlighting for nginx files
+Plug 'godlygeek/tabular'                                        " Table formatting
+Plug 'haya14busa/incsearch.vim'                                 " Improved incremental searching
+Plug 'jiangmiao/auto-pairs'                                     " Automatic bracket closing
+Plug 'kien/ctrlp.vim'                                           " Fuzzy file searcher
 Plug 'lambdatoast/elm.vim'                                      " Elm language syntac
+Plug 'leshill/vim-json'                                         " Better JSON support
+Plug 'marijnh/tern_for_vim', { 'do': 'npm install' }            " JS code analysis
+Plug 'moll/vim-node'                                            " Better support for node modules
+Plug 'mustache/vim-mustache-handlebars'                         " Better support for mustache and handlebars files
+Plug 'mxw/vim-jsx'                                              " Hightlight JSX
+Plug 'nelstrom/vim-visual-star-search'                          " Easily search for the selected text
+Plug 'NLKNguyen/papercolor-theme'                               " Nice color scheme
+Plug 'pangloss/vim-javascript'                                  " Better javascript support
+Plug 'rking/ag.vim'                                             " Fast grep replacement
+Plug 'scrooloose/syntastic'                                     " Syntax checking
 Plug 'shime/vim-livedown', { 'do': 'npm install -g livedown' }  " Live markdown parsing
 Plug 'terryma/vim-multiple-cursors'                             " Sublime-like multiple cursors
-Plug 'mustache/vim-mustache-handlebars'                         " Better support for mustache and handlebars files
-Plug 'moll/vim-node'                                            " Better support for node modules
+Plug 'tpope/vim-abolish'                                        " Working with variants of a world
+Plug 'tpope/vim-commentary'                                     " (Un)commenting lines
+Plug 'tpope/vim-fugitive'                                       " GIT integration
+Plug 'tpope/vim-jdaddy'                                         " JSON manipulation commands
 Plug 'tpope/vim-repeat'                                         " Use dot operator with plugins
+Plug 'tpope/vim-speeddating'                                    " Manipulation of date strings
 Plug 'tpope/vim-surround'                                       " Commands to work with surroundings
+Plug 'tpope/vim-unimpaired'                                     " Miscellaneous commands
 Plug 'tpope/vim-vinegar'                                        " Directory overview in a panel
-Plug 'evanmiller/nginx-vim-syntax'                              " Syntax highlighting for nginx files
 Plug 'vim-scripts/syntaxudev.vim'                               " Syntax highlighting for udev rules files
-Plug 'dag/vim-fish'                                             " Syntax highlighting for fish files
-Plug 'nelstrom/vim-visual-star-search'                          " Easily search for the selected text
-Plug 'easymotion/vim-easymotion'                                " Simple vertical movements
-Plug 'NLKNguyen/papercolor-theme'                               " Nice color scheme
 call plug#end()
 
+let g:AutoPairsFlyMode = 1                                      " Autoclose interverning brackets
 let g:js_context_colors_enabled=0                               " Do no use js context colors by default
 let g:syntastic_javascript_checkers = ['eslint']                " Check js files with eslint
+let g:syntastic_always_populate_loc_list = 1                    " Put syntastic errors in loc list
+let g:syntastic_auto_loc_list = 1                               " Syntastic automatically opens and closes loclist
+let g:syntastic_check_on_wq = 0                                 " Don't check when exiting VIM.
 let g:SuperTabDefaultCompletionType="context"                   " SuperTab decides which type of completion to use
 let g:airline_powerline_fonts=1                                 " automatically add airline symbols
 let g:airline#extensions#tabline#enabled=1                      " use airline tabs
