@@ -1,13 +1,13 @@
 " vim:fdm=marker
 
-" General {{{
+" General {{{1
 filetype plugin indent on   " enables filetype detection
 runtime! macros/matchit.vim " enable matchit
 syntax on                   " syntax highlighting
 set ttyfast
 set backspace=2
-" }}}
-" Text editing defaults {{{
+
+" Text editing defaults {{{1
 set omnifunc=syntaxcomplete#Complete " Enable omni-completion
 set completeopt-=preview    " do not show preview window when auto-completing
 set laststatus=2            " always display the statusline in all windows
@@ -25,8 +25,8 @@ set scrolloff=1             " always keep a line above and below the cursor
 set incsearch               " highlight search term while typing
 set hlsearch                " Highlight search results
 set history=1000            " remember more old commands
-" }}}
-" Plugins {{{
+
+" Plugins {{{1
 call plug#begin('~/.vim/plugged')                               " start plugin manager
 Plug 'airblade/vim-gitgutter'                                   " Column with line changes
 Plug 'ajh17/vim-fist'                                           " Easy creation of Github gists
@@ -83,13 +83,13 @@ set shell=/bin/bash                                             " required by gi
 if executable('ag')
     let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 endif
-" }}}
-" Style {{{
+
+" Style {{{1
 set guifont=Sauce\ Code\ Powerline\ 10
 set background=light
 colorscheme PaperColor
-" }}}
-" Mappings {{{
+
+" Mappings {{{1
 let mapleader=" "
 let maplocalleader="\\"
 " Easy movement between windows
@@ -107,19 +107,18 @@ map <leader> <plug>(easymotion-prefix)
 map /  <plug>(incsearch-forward)
 map ?  <plug>(incsearch-backward)
 map g/ <plug>(incsearch-stay)
-" }}}
-" Abbreviations {{{
+
+" Abbreviations {{{1
 ab fn function
-" }}}
-" Autocmds {{{
+
+" Autocmds {{{1
 autocmd FileType markdown nnoremap <localleader>m :LivedownToggle<CR>
 autocmd FileType javascript nnoremap <localleader>c :JSContextColorToggle<CR>
 autocmd BufRead,BufNewFile *.md set filetype=markdown    " read md files as markdown
 autocmd BufRead,BufNewFile *.sjs set filetype=javascript " read sweet.js macro files as javascript
-" }}}
-" Mouse {{{
+
+" Mouse {{{1
 set mouse=a
-" }}}
-" Hooks {{{
+
+" Hooks {{{1
 autocmd BufWritePre * :%s/\s\+$//e  " automatically remove trailing whitespace on writing
-" }}}
