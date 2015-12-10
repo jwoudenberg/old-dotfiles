@@ -69,7 +69,6 @@ call plug#end()
 let g:AutoPairsFlyMode = 1                                      " Autoclose interverning brackets
 let g:js_context_colors_enabled=0                               " Do no use js context colors by default
 let g:syntastic_javascript_checkers = ['eslint']                " Check js files with eslint
-let g:syntastic_always_populate_loc_list = 1                    " Put syntastic errors in loc list
 let g:syntastic_auto_loc_list = 1                               " Syntastic automatically opens and closes loclist
 let g:syntastic_check_on_wq = 0                                 " Don't check when exiting VIM.
 let g:SuperTabDefaultCompletionType="context"                   " SuperTab decides which type of completion to use
