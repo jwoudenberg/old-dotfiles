@@ -23,3 +23,6 @@ nvm use current > /dev/null
 function fish_mode_prompt
     # overwrite the default fish_mode_prompt to show nothing.
 end
+
+# Configure fzf
+set -x FZF_DEFAULT_COMMAND 'ag -g ""'
