@@ -40,7 +40,8 @@ Plug 'evanmiller/nginx-vim-syntax'                              " Syntax highlig
 Plug 'godlygeek/tabular'                                        " Table formatting
 Plug 'haya14busa/incsearch.vim'                                 " Improved incremental searching
 Plug 'jiangmiao/auto-pairs'                                     " Automatic bracket closing
-Plug 'kien/ctrlp.vim'                                           " Fuzzy file searcher
+Plug 'junegunn/fzf'                                             " Fuzzy file searching
+Plug 'junegunn/fzf.vim'
 Plug 'lambdatoast/elm.vim'                                      " Elm language syntac
 Plug 'leshill/vim-json'                                         " Better JSON support
 Plug 'marijnh/tern_for_vim', { 'do': 'npm install' }            " JS code analysis
@@ -68,6 +69,7 @@ call plug#end()
 
 let g:AutoPairsFlyMode = 1                                      " Autoclose interverning brackets
 let g:js_context_colors_enabled=0                               " Do no use js context colors by default
+let g:fzf_layout = { 'window': 'enew' }                         " fzf panes take over the current window
 let g:syntastic_javascript_checkers = ['eslint']                " Check js files with eslint
 let g:syntastic_auto_loc_list = 1                               " Syntastic automatically opens and closes loclist
 let g:syntastic_check_on_wq = 0                                 " Don't check when exiting VIM.
@@ -97,11 +99,13 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 " Clear highlighted search results
-nnoremap <C-B> :CtrlPBuffer<CR>
 nnoremap <silent> <leader>c :nohlsearch<CR>
 " Open vimrc in vertical split
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
+" Perform fuzzy file searching
+nnoremap <C-P> :Files<CR>
+nnoremap <C-B> :Buffers<CR>
 map <leader> <plug>(easymotion-prefix)
 map /  <plug>(incsearch-forward)
 map ?  <plug>(incsearch-backward)
