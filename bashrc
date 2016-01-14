@@ -6,7 +6,7 @@ source /usr/share/git/completion/git-completion.bash
 source /usr/share/git/completion/git-prompt.sh
 
 # set path
-export PATH="${PATH}:./node_modules/.bin:/home/jasper/scripts:/home/jasper/.cabal/bin:/home/jasper/.gem/ruby/2.2.0/bin"
+export PATH="${PATH}:./node_modules/.bin:/home/jasper/scripts:/home/jasper/.cabal/bin:/home/jasper/.gem/ruby/2.2.0/bin:/home/jasper/.local/bin"
 export EDITOR=nvim
 export BROWSER=/usr/bin/chromium
 

@@ -42,7 +42,7 @@ Plug 'haya14busa/incsearch.vim'                                 " Improved incre
 Plug 'jiangmiao/auto-pairs'                                     " Automatic bracket closing
 Plug 'junegunn/fzf'                                             " Fuzzy file searching
 Plug 'junegunn/fzf.vim'
-Plug 'lambdatoast/elm.vim'                                      " Elm language syntac
+Plug 'ElmCast/elm-vim'                                          " Elm language syntac
 Plug 'leshill/vim-json'                                         " Better JSON support
 Plug 'marijnh/tern_for_vim', { 'do': 'npm install' }            " JS code analysis
 Plug 'moll/vim-node'                                            " Better support for node modules
@@ -116,6 +116,7 @@ ab fn function
 " Autocmds {{{1
 autocmd FileType markdown nnoremap <localleader>m :LivedownToggle<CR>
 autocmd FileType javascript nnoremap <localleader>c :JSContextColorToggle<CR>
+autocmd BufWritePost *.elm silent execute "!elm-format --yes %" | edit! | set filetype=elm
 autocmd BufRead,BufNewFile *.md set filetype=markdown    " read md files as markdown
 autocmd BufRead,BufNewFile *.sjs set filetype=javascript " read sweet.js macro files as javascript
 
