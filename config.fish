@@ -11,6 +11,7 @@ alias lock "xscreensaver-command --lock"
 alias xclip "xclip -selection clipboard"
 alias vimrc "$EDITOR ~/.vimrc"
 alias vim "nvim"
+alias nvim "env NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim"
 
 # Make NVM available.
 function nvm
