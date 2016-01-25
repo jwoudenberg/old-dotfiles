@@ -127,14 +127,19 @@ map g/ <plug>(incsearch-stay)
 nnoremap <silent> <leader>t :Ttoggle<cr>
 tnoremap <silent> <leader>t <C-\><C-n>:Ttoggle<cr>
 tnoremap <C-[> <C-\><C-n>
+tnoremap <C-J> <C-\><C-n><C-W><C-J>
+tnoremap <C-K> <C-\><C-n><C-W><C-K>
+tnoremap <C-L> <C-\><C-n><C-W><C-L>
+tnoremap <C-H> <C-\><C-n><C-W><C-H>
 
 " Autocmds {{{1
-autocmd FileType markdown nnoremap <localleader>m :LivedownToggle<CR>
-autocmd FileType javascript nnoremap <localleader>c :JSContextColorToggle<CR>
+autocmd FileType markdown nnoremap <localleader>m :LivedownToggle<cr>
+autocmd FileType javascript nnoremap <localleader>c :JSContextColorToggle<cr>
 autocmd FileType elm setlocal tabstop=4 | setlocal shiftwidth=4 | setlocal makeprg=elm-make\ --warn\ --output\ elm.js\ %
 autocmd BufWritePost *.elm silent execute "!elm-format --yes %" | edit! | set filetype=elm
 autocmd BufRead,BufNewFile *.md set filetype=markdown    " read md files as markdown
 autocmd BufRead,BufNewFile *.sjs set filetype=javascript " read sweet.js macro files as javascript
+autocmd WinEnter term://* startinsert
 
 " Mouse {{{1
 set mouse=a
