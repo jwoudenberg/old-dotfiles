@@ -33,7 +33,6 @@ Plug 'airblade/vim-gitgutter'                                   " Column with li
 Plug 'ajh17/vim-fist'                                           " Easy creation of Github gists
 Plug 'bigfish/vim-js-context-coloring', { 'do': 'npm install' } " Context coloring for javascript
 Plug 'dag/vim-fish'                                             " Syntax highlighting for fish files
-Plug 'easymotion/vim-easymotion'                                " Simple vertical movements
 Plug 'editorconfig/editorconfig-vim'                            " Settings based on .editorconfig file
 Plug 'ElmCast/elm-vim'                                          " Elm language syntac
 Plug 'ervandew/supertab'                                        " Tab completion
@@ -57,7 +56,6 @@ Plug 'nelstrom/vim-visual-star-search'                          " Easily search 
 Plug 'pangloss/vim-javascript'                                  " Better javascript support
 Plug 'scrooloose/syntastic'                                     " Syntax checking
 Plug 'shime/vim-livedown', { 'do': 'npm install -g livedown' }  " Live markdown parsing
-Plug 'terryma/vim-multiple-cursors'                             " Sublime-like multiple cursors
 Plug 'tpope/vim-abolish'                                        " Working with variants of a world
 Plug 'tpope/vim-commentary'                                     " (Un)commenting lines
 Plug 'tpope/vim-fugitive'                                       " GIT integration
@@ -109,10 +107,6 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 " Perform fuzzy file searching
 nnoremap <C-P> :Files<CR>
 nnoremap <C-B> :Buffers<CR>
-
-" Easy vertical movement
-map <leader>j <plug>(easymotion-j)
-map <leader>k <plug>(easymotion-k)
 
 " Aligning
 xmap ga <Plug>(EasyAlign)
