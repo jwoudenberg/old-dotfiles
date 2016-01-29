@@ -24,8 +24,6 @@ set scrolloff=1
 set incsearch
 set hlsearch
 set history=1000
-set ignorecase
-set smartcase
 
 " Plugins {{{1
 call plug#begin('~/.vim/plugged')                               " start plugin manager
