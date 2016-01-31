@@ -129,7 +129,6 @@ tnoremap <C-H> <C-\><C-n><C-W><C-H>
 " Autocmds {{{1
 autocmd FileType markdown nnoremap <localleader>m :LivedownToggle<cr>
 autocmd FileType javascript nnoremap <localleader>c :JSContextColorToggle<cr>
-autocmd FileType elm setlocal tabstop=4 | setlocal shiftwidth=4
 autocmd BufRead,BufNewFile *.md set filetype=markdown    " read md files as markdown
 autocmd BufRead,BufNewFile *.sjs set filetype=javascript " read sweet.js macro files as javascript
 autocmd WinEnter term://* startinsert
