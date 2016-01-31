@@ -75,6 +75,8 @@ let g:SuperTabDefaultCompletionType="context"                   " SuperTab decid
 let g:fist_anonymously=0                                        " Gists are published under my name
 let g:EditorConfig_exclude_patterns = ['.git/COMMIT_EDITMSG']   " in commit message, do not use editorconfig plugin
 let g:lightline = { 'colorscheme': 'gruvbox' }                  " Lightline theme matches color scheme
+let g:elm_format_autosave = 1
+let g:elm_make_show_warnings = 1
 set shell=/bin/bash                                             " required by gitgutter plugin
 if executable('ag')
     let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
@@ -127,8 +129,7 @@ tnoremap <C-H> <C-\><C-n><C-W><C-H>
 " Autocmds {{{1
 autocmd FileType markdown nnoremap <localleader>m :LivedownToggle<cr>
 autocmd FileType javascript nnoremap <localleader>c :JSContextColorToggle<cr>
-autocmd FileType elm setlocal tabstop=4 | setlocal shiftwidth=4 | setlocal makeprg=elm-make\ --warn\ --output\ elm.js\ %
-autocmd BufWritePost *.elm silent execute "!elm-format --yes %" | edit! | set filetype=elm
+autocmd FileType elm setlocal tabstop=4 | setlocal shiftwidth=4
 autocmd BufRead,BufNewFile *.md set filetype=markdown    " read md files as markdown
 autocmd BufRead,BufNewFile *.sjs set filetype=javascript " read sweet.js macro files as javascript
 autocmd WinEnter term://* startinsert
