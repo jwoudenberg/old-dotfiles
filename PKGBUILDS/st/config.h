@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char font[] = "Sauce Code Powerline:pixelsize=13:antialias=true:hinting=true";
+static char font[] = "Sauce Code Powerline:pixelsize=14:antialias=true:hinting=true";
 static int borderpx = 2;
 
 /*
@@ -32,7 +32,7 @@ static float chscale = 1.0;
  *
  * More advanced example: " `'\"()[]{}"
  */
-static char worddelimiters[] = " ";
+static char worddelimiters[] = " '`\"()[]{}<>|";
 
 /* selection timeouts (in milliseconds) */
 static unsigned int doubleclicktimeout = 300;
@@ -131,7 +131,7 @@ static unsigned int defaultunderline = 7;
  * Internal mouse shortcuts.
  * Beware that overloading Button1 will disable the selection.
  */
-static Mousekey mshortcuts[] = {
+static MouseShortcut mshortcuts[] = {
 	/* button               mask            string */
 	{ Button4,              XK_ANY_MOD,     "\031" },
 	{ Button5,              XK_ANY_MOD,     "\005" },
