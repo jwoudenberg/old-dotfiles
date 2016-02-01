@@ -74,6 +74,7 @@ let g:syntastic_check_on_wq = 0                                 " Don't check wh
 let g:SuperTabDefaultCompletionType="context"                   " SuperTab decides which type of completion to use
 let g:fist_anonymously=0                                        " Gists are published under my name
 let g:EditorConfig_exclude_patterns = ['.git/COMMIT_EDITMSG']   " in commit message, do not use editorconfig plugin
+let g:gruvbox_italic = 1
 let g:lightline = { 'colorscheme': 'gruvbox' }                  " Lightline theme matches color scheme
 let g:elm_format_autosave = 1
 let g:elm_make_show_warnings = 1
