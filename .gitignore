@@ -1,6 +1,7 @@
 *.swp
 aria2/dht.dat
 vim/.netrwhist
+vim/.init.vim-rplugin~
 vim/plugged
 vim/spell
 vim/init.vim

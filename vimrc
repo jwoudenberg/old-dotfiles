@@ -1,9 +1,9 @@
 " vim:fdm=marker
 
 " General {{{1
-filetype plugin indent on   " enables filetype detection
-runtime! macros/matchit.vim " enable matchit
-syntax on                   " syntax highlighting
+filetype plugin indent on
+runtime! macros/matchit.vim
+syntax on
 set ttyfast
 set backspace=2
 
@@ -33,7 +33,6 @@ Plug 'bigfish/vim-js-context-coloring', { 'do': 'npm install' } " Context colori
 Plug 'dag/vim-fish'                                             " Syntax highlighting for fish files
 Plug 'editorconfig/editorconfig-vim'                            " Settings based on .editorconfig file
 Plug 'ElmCast/elm-vim'                                          " Elm language syntac
-Plug 'ervandew/supertab'                                        " Tab completion
 Plug 'evanmiller/nginx-vim-syntax'                              " Syntax highlighting for nginx files
 Plug 'haya14busa/incsearch.vim'                                 " Improved incremental searching
 Plug 'itchyny/lightline.vim'                                    " Status bar
@@ -51,6 +50,7 @@ Plug 'mustache/vim-mustache-handlebars'                         " Better support
 Plug 'mxw/vim-jsx'                                              " Hightlight JSX
 Plug 'nelstrom/vim-qargs'                                       " Quickfix list entries in args list
 Plug 'nelstrom/vim-visual-star-search'                          " Easily search for the selected text
+Plug 'Shougo/deoplete.nvim'                                     " Code completion
 Plug 'Olical/vim-enmasse'                                       " Editable quickfix list
 Plug 'pangloss/vim-javascript'                                  " Better javascript support
 Plug 'scrooloose/syntastic'                                     " Syntax checking
@@ -67,22 +67,20 @@ Plug 'tpope/vim-vinegar'                                        " Directory over
 Plug 'vim-scripts/syntaxudev.vim'                               " Syntax highlighting for udev rules files
 call plug#end()
 
-let g:AutoPairsFlyMode = 1                                      " Autoclose interverning brackets
-let g:js_context_colors_enabled=0                               " Do no use js context colors by default
-let g:fzf_layout = { 'window': 'enew' }                         " fzf panes take over the current window
-let g:syntastic_javascript_checkers = ['eslint']                " Check js files with eslint
-let g:syntastic_check_on_wq = 0                                 " Don't check when exiting VIM.
-let g:SuperTabDefaultCompletionType="context"                   " SuperTab decides which type of completion to use
-let g:fist_anonymously=0                                        " Gists are published under my name
-let g:EditorConfig_exclude_patterns = ['.git/COMMIT_EDITMSG']   " in commit message, do not use editorconfig plugin
-let g:gruvbox_italic = 1
-let g:lightline = { 'colorscheme': 'gruvbox' }                  " Lightline theme matches color scheme
+let g:AutoPairsFlyMode = 1
+let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+let g:deoplete#enable_at_startup = 1
+let g:EditorConfig_exclude_patterns = ['.git/COMMIT_EDITMSG']
 let g:elm_format_autosave = 1
 let g:elm_make_show_warnings = 1
+let g:fist_anonymously=0
+let g:fzf_layout = { 'window': 'enew' }
+let g:gruvbox_italic = 1
+let g:js_context_colors_enabled=0
+let g:lightline = { 'colorscheme': 'gruvbox' }
+let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_checkers = ['eslint']
 set shell=/bin/bash                                             " required by gitgutter plugin
-if executable('ag')
-    let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-endif
 
 " Style {{{1
 set guifont=Sauce\ Code\ Powerline\ 10
@@ -131,8 +129,8 @@ tnoremap <C-H> <C-\><C-n><C-W><C-H>
 " Autocmds {{{1
 autocmd FileType markdown nnoremap <localleader>m :LivedownToggle<cr>
 autocmd FileType javascript nnoremap <localleader>c :JSContextColorToggle<cr>
-autocmd BufRead,BufNewFile *.md set filetype=markdown    " read md files as markdown
-autocmd BufRead,BufNewFile *.sjs set filetype=javascript " read sweet.js macro files as javascript
+autocmd BufRead,BufNewFile *.md set filetype=markdown
+autocmd BufRead,BufNewFile *.sjs set filetype=javascript
 autocmd WinEnter term://* startinsert
 
 " Mouse {{{1
