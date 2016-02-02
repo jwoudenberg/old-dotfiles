@@ -51,6 +51,7 @@ Plug 'mustache/vim-mustache-handlebars'                         " Better support
 Plug 'mxw/vim-jsx'                                              " Hightlight JSX
 Plug 'nelstrom/vim-qargs'                                       " Quickfix list entries in args list
 Plug 'nelstrom/vim-visual-star-search'                          " Easily search for the selected text
+Plug 'Olical/vim-enmasse'                                       " Editable quickfix list
 Plug 'pangloss/vim-javascript'                                  " Better javascript support
 Plug 'scrooloose/syntastic'                                     " Syntax checking
 Plug 'shime/vim-livedown', { 'do': 'npm install -g livedown' }  " Live markdown parsing
