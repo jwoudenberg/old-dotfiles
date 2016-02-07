@@ -118,9 +118,10 @@ map ?  <plug>(incsearch-backward)
 map g/ <plug>(incsearch-stay)
 
 " Terminal mappings
-nnoremap <silent> <leader>t :Ttoggle<cr>
-tnoremap <silent> <leader>t <C-\><C-n>:Ttoggle<cr>
+nnoremap <silent> <C-T> :Ttoggle<cr>
+tnoremap <silent> <C-T> <C-\><C-n>:Ttoggle<cr>
 tnoremap <C-[> <C-\><C-n>
+tnoremap <C-O> <C-\><C-n><C-o>
 tnoremap <C-J> <C-\><C-n><C-W><C-J>
 tnoremap <C-K> <C-\><C-n><C-W><C-K>
 tnoremap <C-L> <C-\><C-n><C-W><C-L>
