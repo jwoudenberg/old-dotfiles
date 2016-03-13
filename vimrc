@@ -32,6 +32,7 @@ Plug 'ajh17/vim-fist'                                           " Easy creation 
 Plug 'bigfish/vim-js-context-coloring', { 'do': 'npm install' } " Context coloring for javascript
 Plug 'dag/vim-fish'                                             " Syntax highlighting for fish files
 Plug 'editorconfig/editorconfig-vim'                            " Settings based on .editorconfig file
+Plug 'elentok/todo.vim'                                       " Todo.txt support
 Plug 'ElmCast/elm-vim'                                          " Elm language syntac
 Plug 'evanmiller/nginx-vim-syntax'                              " Syntax highlighting for nginx files
 Plug 'haya14busa/incsearch.vim'                                 " Improved incremental searching
@@ -50,11 +51,11 @@ Plug 'mustache/vim-mustache-handlebars'                         " Better support
 Plug 'mxw/vim-jsx'                                              " Hightlight JSX
 Plug 'nelstrom/vim-qargs'                                       " Quickfix list entries in args list
 Plug 'nelstrom/vim-visual-star-search'                          " Easily search for the selected text
-Plug 'Shougo/deoplete.nvim'                                     " Code completion
 Plug 'Olical/vim-enmasse'                                       " Editable quickfix list
 Plug 'pangloss/vim-javascript'                                  " Better javascript support
 Plug 'scrooloose/syntastic'                                     " Syntax checking
 Plug 'shime/vim-livedown', { 'do': 'npm install -g livedown' }  " Live markdown parsing
+Plug 'Shougo/deoplete.nvim'                                     " Code completion
 Plug 'tpope/vim-abolish'                                        " Working with variants of a world
 Plug 'tpope/vim-commentary'                                     " (Un)commenting lines
 Plug 'tpope/vim-fugitive'                                       " GIT integration

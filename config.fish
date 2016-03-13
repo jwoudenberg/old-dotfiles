@@ -12,6 +12,7 @@ alias xclip "xclip -selection clipboard"
 alias vimrc "$EDITOR ~/.vimrc"
 alias vim "nvim"
 alias nvim "env NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim"
+alias todo "$EDITOR ~/docs/todo.txt"
 
 # Make NVM available.
 function nvm
