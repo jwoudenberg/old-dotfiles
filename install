@@ -9,7 +9,6 @@ var linkMap = {
     '~/.bash_profile':              'bash_profile',
     '~/.local/share/fonts':         'fonts',
     '~/.gitconfig':                 'gitconfig',
-    '~/.eslintrc':                  'eslintrc',
     '~/.vim':                       'vim',
     '~/.vimrc':                     'vimrc',
     '~/.xinitrc':                   'xinitrc',

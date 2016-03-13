@@ -79,7 +79,7 @@ let g:gruvbox_italic = 1
 let g:js_context_colors_enabled=0
 let g:lightline = { 'colorscheme': 'gruvbox' }
 let g:syntastic_check_on_wq = 0
-let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_checkers = ['standard']
 set shell=/bin/bash                                             " required by gitgutter plugin
 
 " Style {{{1
