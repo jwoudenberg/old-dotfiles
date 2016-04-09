@@ -1,5 +1,8 @@
 #!/bin/sh
 
+#Set DPI
+xrandr --dpi 144
+
 #Load Xresources
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 
@@ -14,5 +17,5 @@ numlockx
 #Remap keys
 xmodmap ~/.xmodmap
 
-#Start Awesome Window Manager
-exec awesome
+#Start i3 Window Manager
+exec i3
