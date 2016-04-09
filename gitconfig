@@ -1,6 +1,7 @@
 [user]
 	name = Jasper Woudenberg
 	email = mail@jasperwoudenberg.com
+	signingkey = ACA487EA
 [mergetool]
 	keepBackup = false
 [push]

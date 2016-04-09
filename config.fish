@@ -14,11 +14,6 @@ alias vim "nvim"
 alias nvim "env NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim"
 alias todo "$EDITOR ~/docs/todo.txt"
 
-# Make NVM available.
-function nvm
-    bass source ~/.nvm/nvm.sh ';' nvm $argv
-end
-
 # And run it immediately to set npm and node commands.
 nvm use current > /dev/null
 

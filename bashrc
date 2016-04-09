@@ -15,3 +15,6 @@ set -o vi
 
 # start x
 [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx
+
+export NVM_DIR="/home/jasper/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
