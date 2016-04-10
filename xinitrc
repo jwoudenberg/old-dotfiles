@@ -17,5 +17,8 @@ numlockx
 #Remap keys
 xmodmap ~/.xmodmap
 
+#Set wallpaper
+sh ~/.fehbg &
+
 #Start i3 Window Manager
 exec i3
