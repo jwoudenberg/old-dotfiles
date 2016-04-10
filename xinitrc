@@ -14,5 +14,8 @@ numlockx
 #Remap keys
 xmodmap ~/.xmodmap
 
-#Start Awesome Window Manager
-exec awesome
+#Set wallpaper
+sh ~/.fehbg &
+
+#Start i3 Window Manager
+exec i3
