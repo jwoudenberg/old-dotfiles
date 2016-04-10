@@ -87,7 +87,7 @@ function nvm-fast
 				end
 			end
 			set new_path $brigand_nvm_fish_path/v$matched_version/bin $new_path
-			set fish_user_paths $new_path
+			set -g fish_user_paths $new_path
 		end
 	else
 		bash -c "source ~/.nvm/nvm.sh; nvm $argv"
