@@ -14,7 +14,7 @@ var linkMap = {
     '~/.xinitrc':                   'xinitrc',
     '~/.xmodmap':                   'xmodmap',
     '~/.Xresources':                'Xresources',
-    '~/.config/awesome/rc.lua':     'awesome-rc.lua',
+    '~/.config/i3/config':          'i3-config',
     '~/.config/fish/config.fish':   'config.fish',
     '~/.config/fish/functions':     'fish-functions'
 };
