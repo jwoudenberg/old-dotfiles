@@ -1,58 +1,25 @@
-#!/usr/bin/env node
-var fs = require('fs');
-var path = require('path');
-var format = require('util').format;
+#!/usr/bin/fish
 
-//Keys are paths, values files in ./dotfiles that will be mapped there.
-var linkMap = {
-    '~/.bashrc':                    'bashrc',
-    '~/.bash_profile':              'bash_profile',
-    '~/.local/share/fonts':         'fonts',
-    '~/.gitconfig':                 'gitconfig',
-    '~/.vim':                       'vim',
-    '~/.vimrc':                     'vimrc',
-    '~/.xinitrc':                   'xinitrc',
-    '~/.xmodmap':                   'xmodmap',
-    '~/.Xresources':                'Xresources',
-    '~/.fehbg':                     'fehbg',
-    '~/.config/i3/config':          'i3-config',
-    '~/.config/i3status/config':    'i3status-config',
-    '~/.config/fish/config.fish':   'config.fish',
-    '~/.config/fish/functions':     'fish-functions'
-};
+function link -a target link_name
+  if begin; test -e $link_name; and not test -L $link_name; end
+    echo (set_color red)"Cannot create a symlink from $link_name. File already exists"
+  else
+    echo (set_color normal)"Linking $link_name -> $target"
+    ln -sfnT $target $link_name
+  end
+end
 
-var paths = Object.keys(linkMap);
-paths.forEach(function (relDestination) {
-    var fileName = linkMap[relDestination];
-    var source = path.join(__dirname, fileName);
-    //Bail if the source doesn't exist.
-    if (!fs.existsSync(source)) {
-        return console.log(format(
-            '%s cannot be found in dotfiles. Skipping it.',
-            fileName
-        ));
-    }
-    var home = process.env.HOME;
-    //node cannot deal with ~ paths. Get the full destination path.
-    var destination = relDestination.replace(/^~/, home);
-    //Create a readable version of the source path, for loggin.
-    var relSource = source.replace(home, '~');
-    if (fs.existsSync(destination)) {
-        if (fs.lstatSync(destination).isSymbolicLink()) {
-            fs.unlinkSync(destination);
-        }
-        else {
-            return console.log(format(
-                '%s already exists. Skipping linking of %s.',
-                relDestination,
-                fileName
-            ));
-        }
-    }
-    console.log(format(
-        'linking %s -> %s',
-        relSource,
-        relDestination
-    ));
-    fs.symlinkSync(source, destination);
-});
+set cwd (pwd)
+
+# Home directory files
+for file in (ls "$cwd/home")
+  link "$cwd/home/$file" "$HOME/.$file"
+end
+
+# Config directories
+for file in (ls "$cwd/config")
+  link "$cwd/config/$file" "$HOME/.config/$file"
+end
+
+# Fonts
+link "$cwd/fonts" "$HOME/.local/share/fonts"
