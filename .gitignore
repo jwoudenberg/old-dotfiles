@@ -5,3 +5,4 @@ config/fish/fishd.*
 config/nvim/.*
 config/nvim/plugged
 config/nvim/spell
+config/nvim/sessions
