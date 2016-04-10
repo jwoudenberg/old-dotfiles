@@ -68,5 +68,5 @@ function fish_prompt --description 'Write out the prompt'
 		)
 	end
 
-    echo -n -s (set_color $fish_color_user) "$USER" ' ' (set_color $fish_color_host) (pwd | sed "s|$HOME|~|") (set_color $fish_color_status) (__fish_git_prompt) \n (set_color $mode_color) " > "
+    echo -n -s (set_color $fish_color_user) "$USER" ' ' (set_color $fish_color_host) (pwd | sed "s|$HOME|~|") (set_color $fish_color_status) (__fish_git_prompt) \n (set_color $mode_color) " > "(set_color normal)
 end
