@@ -8,3 +8,5 @@
 	default = simple
 [web]
 	browser = chromium
+[commit]
+  gpgsign = true
