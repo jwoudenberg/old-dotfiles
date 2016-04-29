@@ -30,14 +30,14 @@ call plug#begin('~/.vim/plugged')                               " start plugin m
 Plug 'airblade/vim-gitgutter'                                   " Column with line changes
 Plug 'ajh17/vim-fist'                                           " Easy creation of Github gists
 Plug 'bigfish/vim-js-context-coloring', { 'do': 'npm install' } " Context coloring for javascript
+Plug 'cohama/lexima.vim'                                        " Brace autocloser that works with .
 Plug 'dag/vim-fish'                                             " Syntax highlighting for fish files
 Plug 'editorconfig/editorconfig-vim'                            " Settings based on .editorconfig file
-Plug 'elentok/todo.vim'                                       " Todo.txt support
+Plug 'elentok/todo.vim'                                         " Todo.txt support
 Plug 'ElmCast/elm-vim'                                          " Elm language syntac
 Plug 'evanmiller/nginx-vim-syntax'                              " Syntax highlighting for nginx files
 Plug 'haya14busa/incsearch.vim'                                 " Improved incremental searching
 Plug 'itchyny/lightline.vim'                                    " Status bar
-Plug 'jiangmiao/auto-pairs'                                     " Automatic bracket closing
 Plug 'junegunn/fzf'                                             " Fuzzy file searching
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'                                        " Distraction free writing mode
