@@ -26,7 +26,7 @@ set hlsearch
 set history=1000
 
 " Plugins {{{1
-call plug#begin('~/.vim/plugged')                               " start plugin manager
+call plug#begin('~/.vim/plugged')
 Plug 'airblade/vim-gitgutter'                                   " Column with line changes
 Plug 'ajh17/vim-fist'                                           " Easy creation of Github gists
 Plug 'bigfish/vim-js-context-coloring', { 'do': 'npm install' } " Context coloring for javascript
@@ -49,12 +49,10 @@ Plug 'moll/vim-node'                                            " Better support
 Plug 'morhetz/gruvbox'                                          " Colorscheme
 Plug 'mustache/vim-mustache-handlebars'                         " Better support for mustache and handlebars files
 Plug 'mxw/vim-jsx'                                              " Hightlight JSX
-Plug 'nelstrom/vim-qargs'                                       " Quickfix list entries in args list
 Plug 'nelstrom/vim-visual-star-search'                          " Easily search for the selected text
 Plug 'Olical/vim-enmasse'                                       " Editable quickfix list
 Plug 'pangloss/vim-javascript'                                  " Better javascript support
 Plug 'scrooloose/syntastic'                                     " Syntax checking
-Plug 'shime/vim-livedown', { 'do': 'npm install -g livedown' }  " Live markdown parsing
 Plug 'Shougo/deoplete.nvim'                                     " Code completion
 Plug 'tpope/vim-abolish'                                        " Working with variants of a world
 Plug 'tpope/vim-commentary'                                     " (Un)commenting lines
