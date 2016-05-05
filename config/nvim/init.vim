@@ -41,6 +41,7 @@ Plug 'itchyny/lightline.vim'                                    " Status bar
 Plug 'junegunn/fzf'                                             " Fuzzy file searching
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'                                        " Distraction free writing mode
+Plug 'junegunn/gv.vim'                                          " Git commit browser
 Plug 'junegunn/vim-easy-align'                                  " Alignment commands
 Plug 'kassio/neoterm'                                           " Neovim terminal helpers
 Plug 'leshill/vim-json'                                         " Better JSON support
