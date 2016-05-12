@@ -75,7 +75,6 @@ let g:elm_format_autosave = 1
 let g:elm_make_show_warnings = 1
 let g:fist_anonymously=0
 let g:fzf_layout = { 'window': 'enew' }
-let g:gruvbox_italic = 1
 let g:js_context_colors_enabled=0
 let g:lightline = { 'colorscheme': 'gruvbox' }
 let g:syntastic_check_on_wq = 0
