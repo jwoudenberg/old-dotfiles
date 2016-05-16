@@ -73,6 +73,7 @@ let g:deoplete#enable_at_startup = 1
 let g:EditorConfig_exclude_patterns = ['.git/COMMIT_EDITMSG']
 let g:elm_format_autosave = 1
 let g:elm_make_show_warnings = 1
+let g:elm_syntastic_show_warnings = 1
 let g:fist_anonymously=0
 let g:fzf_layout = { 'window': 'enew' }
 let g:js_context_colors_enabled=0
