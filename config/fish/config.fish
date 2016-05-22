@@ -15,7 +15,7 @@ alias nvim "env NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim"
 alias todo "$EDITOR ~/docs/todo.txt"
 
 # And run it immediately to set npm and node commands.
-nvm use current > /dev/null
+nvm use (nvm version current) > /dev/null
 
 function fish_mode_prompt
     # overwrite the default fish_mode_prompt to show nothing.
