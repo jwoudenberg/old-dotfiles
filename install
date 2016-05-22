@@ -20,6 +20,3 @@ end
 for file in (ls "$cwd/config")
   link "$cwd/config/$file" "$HOME/.config/$file"
 end
-
-# Fonts
-link "$cwd/fonts" "$HOME/.local/share/fonts"
