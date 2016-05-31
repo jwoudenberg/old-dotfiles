@@ -1,7 +1,7 @@
 #!/bin/fish
 
 # Set vi keybindings.
-fish_vi_mode
+fish_vi_key_bindings
 
 # No greeting message.
 set fish_greeting
