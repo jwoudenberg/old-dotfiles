@@ -27,6 +27,7 @@ set history=1000
 
 " Plugins {{{1
 call plug#begin('~/.vim/plugged')
+Plug 'wavded/vim-stylus'                                        " Styling of .styl fi.es
 Plug 'airblade/vim-gitgutter'                                   " Column with line changes
 Plug 'ajh17/vim-fist'                                           " Easy creation of Github gists
 Plug 'bigfish/vim-js-context-coloring', { 'do': 'npm install' } " Context coloring for javascript
@@ -35,6 +36,7 @@ Plug 'dag/vim-fish'                                             " Syntax highlig
 Plug 'editorconfig/editorconfig-vim'                            " Settings based on .editorconfig file
 Plug 'elentok/todo.vim'                                         " Todo.txt support
 Plug 'ElmCast/elm-vim'                                          " Elm language syntac
+Plug 'elzr/vim-json'                                            " Better JSON support
 Plug 'evanmiller/nginx-vim-syntax'                              " Syntax highlighting for nginx files
 Plug 'haya14busa/incsearch.vim'                                 " Improved incremental searching
 Plug 'itchyny/lightline.vim'                                    " Status bar
@@ -44,7 +46,6 @@ Plug 'junegunn/goyo.vim'                                        " Distraction fr
 Plug 'junegunn/gv.vim'                                          " Git commit browser
 Plug 'junegunn/vim-easy-align'                                  " Alignment commands
 Plug 'kassio/neoterm'                                           " Neovim terminal helpers
-Plug 'leshill/vim-json'                                         " Better JSON support
 Plug 'marijnh/tern_for_vim', { 'do': 'npm install' }            " JS code analysis
 Plug 'moll/vim-node'                                            " Better support for node modules
 Plug 'morhetz/gruvbox'                                          " Colorscheme
@@ -80,6 +81,8 @@ let g:js_context_colors_enabled=0
 let g:lightline = { 'colorscheme': 'gruvbox' }
 let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['standard']
+let g:vim_json_syntax_conceal = 0
+let g:vim_json_warnings = 0
 set shell=/bin/bash                                             " required by gitgutter plugin
 
 " Style {{{1
