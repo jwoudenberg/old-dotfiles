@@ -35,6 +35,7 @@ Plug 'cohama/lexima.vim'                                        " Brace autoclos
 Plug 'dag/vim-fish'                                             " Syntax highlighting for fish files
 Plug 'editorconfig/editorconfig-vim'                            " Settings based on .editorconfig file
 Plug 'elentok/todo.vim'                                         " Todo.txt support
+Plug 'elixir-lang/vim-elixir'                                   " Elixer support
 Plug 'ElmCast/elm-vim'                                          " Elm language syntac
 Plug 'elzr/vim-json'                                            " Better JSON support
 Plug 'evanmiller/nginx-vim-syntax'                              " Syntax highlighting for nginx files
