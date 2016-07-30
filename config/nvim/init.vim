@@ -57,6 +57,7 @@ Plug 'Olical/vim-enmasse'                                       " Editable quick
 Plug 'pangloss/vim-javascript'                                  " Better javascript support
 Plug 'scrooloose/syntastic'                                     " Syntax checking
 Plug 'Shougo/deoplete.nvim'                                     " Code completion
+Plug 'tommcdo/vim-lion'                                         " Alignment commands
 Plug 'tpope/vim-abolish'                                        " Working with variants of a world
 Plug 'tpope/vim-commentary'                                     " (Un)commenting lines
 Plug 'tpope/vim-eunuch'                                         " Unix commands
