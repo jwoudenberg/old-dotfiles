@@ -159,3 +159,6 @@ bar {
 
 new_window pixel 1
 hide_edge_borders both
+
+bindsym Print exec maim ~/tmp/screenshot-$(date +%F-%T).png
+bindsym Ctrl+Print exec maim -s ~/tmp/screenshot-$(date +%F-%T).png
