@@ -24,6 +24,7 @@ set scrolloff=1
 set incsearch
 set hlsearch
 set history=1000
+set cursorline
 
 " Plugins {{{1
 call plug#begin('~/.vim/plugged')
@@ -67,6 +68,7 @@ Plug 'tpope/vim-repeat'                                         " Use dot operat
 Plug 'tpope/vim-speeddating'                                    " Manipulation of date strings
 Plug 'tpope/vim-surround'                                       " Commands to work with surroundings
 Plug 'tpope/vim-unimpaired'                                     " Miscellaneous commands
+Plug 'vim-scripts/CursorLineCurrentWindow'                      " Only show the cursorline in the active window
 Plug 'vim-scripts/syntaxudev.vim'                               " Syntax highlighting for udev rules files
 Plug 'wavded/vim-stylus'                                        " Styling of .styl fi.es
 call plug#end()
