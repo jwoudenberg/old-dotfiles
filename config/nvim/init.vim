@@ -33,6 +33,7 @@ Plug 'ajh17/vim-fist'                                           " Easy creation 
 Plug 'bigfish/vim-js-context-coloring', { 'do': 'npm install' } " Context coloring for javascript
 Plug 'cohama/lexima.vim'                                        " Brace autocloser that works with .
 Plug 'dag/vim-fish'                                             " Syntax highlighting for fish files
+Plug 'justinmk/vim-dirvish'                                     " File explorer
 Plug 'editorconfig/editorconfig-vim'                            " Settings based on .editorconfig file
 Plug 'elentok/todo.vim'                                         " Todo.txt support
 Plug 'elixir-lang/vim-elixir'                                   " Elixer support
@@ -59,13 +60,13 @@ Plug 'scrooloose/syntastic'                                     " Syntax checkin
 Plug 'Shougo/deoplete.nvim'                                     " Code completion
 Plug 'tpope/vim-abolish'                                        " Working with variants of a world
 Plug 'tpope/vim-commentary'                                     " (Un)commenting lines
+Plug 'tpope/vim-eunuch'                                         " Unix commands
 Plug 'tpope/vim-fugitive'                                       " GIT integration
 Plug 'tpope/vim-jdaddy'                                         " JSON manipulation commands
 Plug 'tpope/vim-repeat'                                         " Use dot operator with plugins
 Plug 'tpope/vim-speeddating'                                    " Manipulation of date strings
 Plug 'tpope/vim-surround'                                       " Commands to work with surroundings
 Plug 'tpope/vim-unimpaired'                                     " Miscellaneous commands
-Plug 'tpope/vim-vinegar'                                        " Directory overview in a panel
 Plug 'vim-scripts/syntaxudev.vim'                               " Syntax highlighting for udev rules files
 call plug#end()
 
@@ -136,6 +137,7 @@ autocmd FileType markdown nnoremap <localleader>m :LivedownToggle<cr>
 autocmd FileType javascript nnoremap <localleader>c :JSContextColorToggle<cr>
 autocmd BufRead,BufNewFile *.md set filetype=markdown
 autocmd BufRead,BufNewFile *.sjs set filetype=javascript
+autocmd FileType dirvish setlocal nonumber
 autocmd WinEnter term://* startinsert
 
 " Mouse {{{1

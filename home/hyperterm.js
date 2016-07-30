@@ -4,10 +4,10 @@ module.exports = {
     fontSize: 18,
 
     // font family with optional fallbacks
-    fontFamily: 'Iosevka, Menlo, "DejaVu Sans Mono", "Lucida Console", monospace',
+    fontFamily: 'Source Code Pro, Menlo, "DejaVu Sans Mono", "Lucida Console", monospace',
 
     // terminal cursor background color (hex)
-    cursorColor: '#F81CE5',
+    cursorColor: '#FFF',
 
     // color of the text
     foregroundColor: '#fff',
