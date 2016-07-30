@@ -27,13 +27,11 @@ set history=1000
 
 " Plugins {{{1
 call plug#begin('~/.vim/plugged')
-Plug 'wavded/vim-stylus'                                        " Styling of .styl fi.es
 Plug 'airblade/vim-gitgutter'                                   " Column with line changes
 Plug 'ajh17/vim-fist'                                           " Easy creation of Github gists
 Plug 'bigfish/vim-js-context-coloring', { 'do': 'npm install' } " Context coloring for javascript
 Plug 'cohama/lexima.vim'                                        " Brace autocloser that works with .
 Plug 'dag/vim-fish'                                             " Syntax highlighting for fish files
-Plug 'justinmk/vim-dirvish'                                     " File explorer
 Plug 'editorconfig/editorconfig-vim'                            " Settings based on .editorconfig file
 Plug 'elentok/todo.vim'                                         " Todo.txt support
 Plug 'elixir-lang/vim-elixir'                                   " Elixer support
@@ -47,6 +45,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'                                        " Distraction free writing mode
 Plug 'junegunn/gv.vim'                                          " Git commit browser
 Plug 'junegunn/vim-easy-align'                                  " Alignment commands
+Plug 'justinmk/vim-dirvish'                                     " File explorer
 Plug 'kassio/neoterm'                                           " Neovim terminal helpers
 Plug 'marijnh/tern_for_vim', { 'do': 'npm install' }            " JS code analysis
 Plug 'moll/vim-node'                                            " Better support for node modules
@@ -68,6 +67,7 @@ Plug 'tpope/vim-speeddating'                                    " Manipulation o
 Plug 'tpope/vim-surround'                                       " Commands to work with surroundings
 Plug 'tpope/vim-unimpaired'                                     " Miscellaneous commands
 Plug 'vim-scripts/syntaxudev.vim'                               " Syntax highlighting for udev rules files
+Plug 'wavded/vim-stylus'                                        " Styling of .styl fi.es
 call plug#end()
 
 let g:AutoPairsFlyMode = 1
