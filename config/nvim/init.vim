@@ -141,6 +141,7 @@ autocmd FileType javascript nnoremap <localleader>c :JSContextColorToggle<cr>
 autocmd BufRead,BufNewFile *.md set filetype=markdown
 autocmd BufRead,BufNewFile *.sjs set filetype=javascript
 autocmd FileType dirvish setlocal nonumber
+autocmd FileType dirvish sort r /[^\/]$/
 autocmd WinEnter term://* startinsert
 
 " Mouse {{{1
