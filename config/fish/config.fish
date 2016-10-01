@@ -21,8 +21,11 @@ function fish_mode_prompt
     # overwrite the default fish_mode_prompt to show nothing.
 end
 
+# Rebound Ctrl behaves as Escape
+xcape -e 'Control_L=Control_L|Escape'
+
 # Configure fzf
-set -x FZF_DEFAULT_COMMAND 'ag -g ""'
+set -x FZF_DEFAULT_COMMAND 'rg --files'
 
 set -x MANPAGER "/bin/sh -c \"unset MANPAGER;col -b -x | \
     nvim -R -c 'set ft=man nomod nolist' -c 'map q :q<CR>' \
