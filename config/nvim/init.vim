@@ -31,7 +31,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'airblade/vim-gitgutter'                                   " Column with line changes
 Plug 'ajh17/vim-fist'                                           " Easy creation of Github gists
 Plug 'bigfish/vim-js-context-coloring', { 'do': 'npm install' } " Context coloring for javascript
-Plug 'cohama/lexima.vim'                                        " Brace autocloser that works with .
 Plug 'dag/vim-fish'                                             " Syntax highlighting for fish files
 Plug 'editorconfig/editorconfig-vim'                            " Settings based on .editorconfig file
 Plug 'elentok/todo.vim'                                         " Todo.txt support
@@ -41,6 +40,7 @@ Plug 'elzr/vim-json'                                            " Better JSON su
 Plug 'evanmiller/nginx-vim-syntax'                              " Syntax highlighting for nginx files
 Plug 'haya14busa/incsearch.vim'                                 " Improved incremental searching
 Plug 'itchyny/lightline.vim'                                    " Status bar
+Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf'                                             " Fuzzy file searching
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'                                        " Distraction free writing mode
@@ -74,7 +74,6 @@ Plug 'wavded/vim-stylus'                                        " Styling of .st
 call plug#end()
 
 let g:AutoPairsFlyMode = 1
-let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 let g:deoplete#enable_at_startup = 1
 let g:EditorConfig_exclude_patterns = ['.git/COMMIT_EDITMSG']
 let g:elm_format_autosave = 1
