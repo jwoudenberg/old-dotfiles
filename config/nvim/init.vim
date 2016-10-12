@@ -144,6 +144,7 @@ autocmd BufRead,BufNewFile *.sjs set filetype=javascript
 autocmd FileType dirvish setlocal nonumber
 autocmd FileType dirvish sort r /[^\/]$/
 autocmd WinEnter term://* startinsert
+autocmd BufWinLeave *;#FZF bd!
 
 " Mouse {{{1
 set mouse=a
