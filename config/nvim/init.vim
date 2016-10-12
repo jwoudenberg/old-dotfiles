@@ -47,6 +47,7 @@ Plug 'junegunn/goyo.vim'                                        " Distraction fr
 Plug 'junegunn/gv.vim'                                          " Git commit browser
 Plug 'junegunn/vim-easy-align'                                  " Alignment commands
 Plug 'justinmk/vim-dirvish'                                     " File explorer
+Plug 'justinmk/vim-sneak'                                       " Medium-range motion
 Plug 'kassio/neoterm'                                           " Neovim terminal helpers
 Plug 'marijnh/tern_for_vim', { 'do': 'npm install' }            " JS code analysis
 Plug 'moll/vim-node'                                            " Better support for node modules
@@ -65,6 +66,7 @@ Plug 'tpope/vim-eunuch'                                         " Unix commands
 Plug 'tpope/vim-fugitive'                                       " GIT integration
 Plug 'tpope/vim-jdaddy'                                         " JSON manipulation commands
 Plug 'tpope/vim-repeat'                                         " Use dot operator with plugins
+Plug 'tpope/vim-sleuth'                                         " Detect indent style from a file
 Plug 'tpope/vim-speeddating'                                    " Manipulation of date strings
 Plug 'tpope/vim-surround'                                       " Commands to work with surroundings
 Plug 'tpope/vim-unimpaired'                                     " Miscellaneous commands
