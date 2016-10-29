@@ -1,0 +1,13 @@
+diff --git a/st.c b/st.c
+index 4d44388..7e10aad 100644
+--- a/st.c
++++ b/st.c
+@@ -3943,7 +3943,7 @@ xdrawcursor(void)
+ {
+ 	static int oldx = 0, oldy = 0;
+ 	int curx;
+-	Glyph g = {' ', ATTR_NULL, defaultbg, defaultcs}, og;
++	Glyph g = {' ', ATTR_NULL, term.line[term.c.y][term.c.x].bg, term.line[term.c.y][term.c.x].fg}, og;
+ 	int ena_sel = sel.ob.x != -1 && sel.alt == IS_SET(MODE_ALTSCREEN);
+ 	Color drawcol;
+ 
