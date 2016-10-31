@@ -25,6 +25,8 @@ set incsearch
 set hlsearch
 set history=1000
 set cursorline
+set hidden
+set nowrap
 
 " Plugins {{{1
 call plug#begin('~/.vim/plugged')
