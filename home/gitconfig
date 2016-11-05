@@ -1,7 +1,8 @@
 [user]
 	name = Jasper Woudenberg
 	email = mail@jasperwoudenberg.com
-	signingkey = ACA487EA
+	signingkey = B3EF929B755CD653
+
 [mergetool]
 	keepBackup = false
 [push]
@@ -9,4 +10,4 @@
 [web]
 	browser = chromium
 [commit]
-  gpgsign = true
+	gpgsign = true
