@@ -15,7 +15,7 @@ source=(http://dl.suckless.org/st/$pkgname-$pkgver.tar.gz
         config.h)
 md5sums=('29b2a599cf1511c8062ed8f025c84c63'
          '6209d073a44f5dad4ed6404e7b737db2'
-         '660cd2e453bf1075ea764accf66d5ea6')
+         'f32ad8feeea7983b6681547cf8bc3f41')
 groups=('modified')
 
 prepare() {

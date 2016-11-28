@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char font[] = "Source Code Pro:pixelsize=18:antialias=true:autohint=true";
+static char font[] = "MesloLGM:pixelsize=18:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -83,32 +83,33 @@ static char termname[] = "st-256color";
 static unsigned int tabspaces = 8;
 
 /* Terminal colors (16 first used in escape sequence) */
+/* Snazzy Theme by @sindresorhus: https://github.com/sindresorhus/hyper-snazzy */
 static const char *colorname[] = {
 	/* 8 normal colors */
-	"#000000",
-	"#cc3e44",
-	"#8dc149",
-	"#cbcb41",
-	"#519aba",
-	"#8dc149",
-	"#519aba",
-	"#6d8086",
+	"#282a36",
+	"#ff5c57",
+	"#5af78e",
+	"#f3f99d",
+	"#57c7ff",
+	"#ff6ac1",
+	"#9aedfe",
+	"#f1f1f0",
 
 	/* 8 bright colors */
-	"#4d5a5e",
-	"#cc3e44",
-	"#8dc149",
-	"#cbcb41",
-	"#519aba",
-	"#8dc149",
-	"#519aba",
-	"#ffffff",
+	"#686868",
+	"#ff5c57",
+	"#5af78e",
+	"#f3f99d",
+	"#57c7ff",
+	"#ff6ac1",
+	"#9aedfe",
+	"#eff0eb",
 
 	[255] = 0,
 
 	/* more colors can be added after 255 to use with DefaultXX */
-	"#d4d7d6",
-	"#0e1112",
+	"#eff0eb",
+	"#282a36",
 };
 
 
