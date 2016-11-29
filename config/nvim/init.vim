@@ -6,8 +6,7 @@ runtime! macros/matchit.vim
 syntax on
 set ttyfast
 set backspace=2
-
-" Text editing defaults {{{1
+set termguicolors
 set omnifunc=syntaxcomplete#Complete
 set completeopt-=preview
 set laststatus=2
