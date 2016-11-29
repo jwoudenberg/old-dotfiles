@@ -31,3 +31,5 @@ set -x MANPAGER "/bin/sh -c \"unset MANPAGER;col -b -x | \
     nvim -R -c 'set ft=man nomod nolist' -c 'map q :q<CR>' \
     -c 'map <SPACE> <C-D>' -c 'map b <C-U>' \
     -c 'nmap K :Man <C-R>=expand(\\\"<cword>\\\")<CR><CR>' -\""
+
+set -x GPG_TTY (tty)
