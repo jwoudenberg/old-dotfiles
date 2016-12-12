@@ -26,6 +26,7 @@ set history=1000
 set cursorline
 set hidden
 set nowrap
+set inccommand=nosplit
 
 " Plugins {{{1
 call plug#begin('~/.vim/plugged')
