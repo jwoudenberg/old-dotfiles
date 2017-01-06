@@ -6,23 +6,19 @@ fish_vi_key_bindings
 # No greeting message.
 set fish_greeting
 
+# Set environment variables.
+set -x EDITOR nvim
+
 # Set aliases.
-alias lock "xscreensaver-command --lock"
-alias xclip "xclip -selection clipboard"
 alias vimrc "$EDITOR ~/.config/nvim/init.vim"
 alias vim "nvim"
+alias stoeffelvim "nvim -u ~/.dotfiles/vim/vimrc"
 alias nvim "env NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim"
 alias todo "$EDITOR ~/docs/todo.txt"
-
-# And run it immediately to set npm and node commands.
-nvm use (nvm version current) > /dev/null
 
 function fish_mode_prompt
     # overwrite the default fish_mode_prompt to show nothing.
 end
-
-# Rebound Ctrl behaves as Escape
-xcape -e 'Control_L=Control_L|Escape'
 
 # Configure fzf
 set -x FZF_DEFAULT_COMMAND 'rg --files'
@@ -38,3 +34,11 @@ set -x GPG_TTY (tty)
 if not set -q TMPDIR
     set -gx TMPDIR /tmp
 end
+
+# Configure nri env
+source /usr/local/share/chruby/chruby.fish
+source /usr/local/share/chruby/auto.fish
+chruby ruby-2.3.3
+source ~/.set-aws-env.fish
+
+set -gx PATH ~/.local/bin /Users/jasper/.stack/programs/x86_64-osx/ghc-8.0.2/bin/ $PATH
