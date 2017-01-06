@@ -145,7 +145,7 @@ autocmd BufRead,BufNewFile *.md set filetype=markdown
 autocmd BufRead,BufNewFile *.sjs set filetype=javascript
 autocmd FileType dirvish setlocal nonumber
 autocmd WinEnter term://* startinsert
-autocmd BufHidden *;#FZF silent! bd!
+autocmd BufLeave *;#FZF silent! bd!
 " Sort files in buffer, but keep the cursor on the file we came from.
 autocmd FileType dirvish let b:dirvish['currentLine']=getline('.') |
   \ sort ir /^.*[^\/]$/ |
