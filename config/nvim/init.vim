@@ -31,9 +31,12 @@ set mouse=a
 
 " Plugins {{{1
 call plug#begin('~/.vim/plugged')
+Plug 'Olical/vim-enmasse'                                       " Editable quickfix list
+Plug 'Shougo/deoplete.nvim'                                     " Code completion
 Plug 'airblade/vim-gitgutter'                                   " Column with line changes
 Plug 'ajh17/vim-fist'                                           " Easy creation of Github gists
 Plug 'bigfish/vim-js-context-coloring', { 'do': 'npm install' } " Context coloring for javascript
+Plug 'bronson/vim-visual-star-search'                          " Easily search for the selected text
 Plug 'dag/vim-fish'                                             " Syntax highlighting for fish files
 Plug 'editorconfig/editorconfig-vim'                            " Settings based on .editorconfig file
 Plug 'elentok/todo.vim'                                         " Todo.txt support
@@ -57,11 +60,9 @@ Plug 'moll/vim-node'                                            " Better support
 Plug 'morhetz/gruvbox'                                          " Colorscheme
 Plug 'mustache/vim-mustache-handlebars'                         " Better support for mustache and handlebars files
 Plug 'mxw/vim-jsx'                                              " Hightlight JSX
-Plug 'bronson/vim-visual-star-search'                          " Easily search for the selected text
-Plug 'Olical/vim-enmasse'                                       " Editable quickfix list
 Plug 'pangloss/vim-javascript'                                  " Better javascript support
+Plug 'qpkorr/vim-bufkill'                                       " Kill a buffer without closing its window
 Plug 'scrooloose/syntastic'                                     " Syntax checking
-Plug 'Shougo/deoplete.nvim'                                     " Code completion
 Plug 'tommcdo/vim-lion'                                         " Alignment commands
 Plug 'tpope/vim-abolish'                                        " Working with variants of a world
 Plug 'tpope/vim-commentary'                                     " (Un)commenting lines
@@ -145,7 +146,7 @@ autocmd BufRead,BufNewFile *.md set filetype=markdown
 autocmd BufRead,BufNewFile *.sjs set filetype=javascript
 autocmd FileType dirvish setlocal nonumber
 autocmd WinEnter term://* startinsert
-autocmd BufLeave *;#FZF silent! bd!
+autocmd BufLeave *;#FZF silent! BD!
 " Sort files in buffer, but keep the cursor on the file we came from.
 autocmd FileType dirvish let b:dirvish['currentLine']=getline('.') |
   \ sort ir /^.*[^\/]$/ |
