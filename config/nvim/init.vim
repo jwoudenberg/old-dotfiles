@@ -27,6 +27,7 @@ set cursorline
 set hidden
 set nowrap
 set inccommand=nosplit
+set mouse=a
 
 " Plugins {{{1
 call plug#begin('~/.vim/plugged')
@@ -37,7 +38,7 @@ Plug 'dag/vim-fish'                                             " Syntax highlig
 Plug 'editorconfig/editorconfig-vim'                            " Settings based on .editorconfig file
 Plug 'elentok/todo.vim'                                         " Todo.txt support
 Plug 'elixir-lang/vim-elixir'                                   " Elixer support
-Plug 'ElmCast/elm-vim'                                          " Elm language syntac
+Plug 'elmcast/elm-vim'                                          " Elm language syntac
 Plug 'elzr/vim-json'                                            " Better JSON support
 Plug 'evanmiller/nginx-vim-syntax'                              " Syntax highlighting for nginx files
 Plug 'haya14busa/incsearch.vim'                                 " Improved incremental searching
@@ -56,7 +57,7 @@ Plug 'moll/vim-node'                                            " Better support
 Plug 'morhetz/gruvbox'                                          " Colorscheme
 Plug 'mustache/vim-mustache-handlebars'                         " Better support for mustache and handlebars files
 Plug 'mxw/vim-jsx'                                              " Hightlight JSX
-Plug 'nelstrom/vim-visual-star-search'                          " Easily search for the selected text
+Plug 'bronson/vim-visual-star-search'                          " Easily search for the selected text
 Plug 'Olical/vim-enmasse'                                       " Editable quickfix list
 Plug 'pangloss/vim-javascript'                                  " Better javascript support
 Plug 'scrooloose/syntastic'                                     " Syntax checking
@@ -74,7 +75,6 @@ Plug 'tpope/vim-surround'                                       " Commands to wo
 Plug 'tpope/vim-unimpaired'                                     " Miscellaneous commands
 Plug 'vim-scripts/CursorLineCurrentWindow'                      " Only show the cursorline in the active window
 Plug 'vim-scripts/syntaxudev.vim'                               " Syntax highlighting for udev rules files
-Plug 'wavded/vim-stylus'                                        " Styling of .styl fi.es
 call plug#end()
 
 let g:AutoPairsFlyMode = 1
@@ -150,9 +150,5 @@ autocmd BufLeave *;#FZF silent! bd!
 autocmd FileType dirvish let b:dirvish['currentLine']=getline('.') |
   \ sort ir /^.*[^\/]$/ |
   \ keepjumps call search('\V\^'.escape(b:dirvish['currentLine'],'\').'\$', 'cw')
-
-" Mouse {{{1
-set mouse=a
-
-" Hooks {{{1
 autocmd BufWritePre * :%s/\s\+$//e  " automatically remove trailing whitespace on writing
+
