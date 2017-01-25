@@ -33,3 +33,8 @@ set -x MANPAGER "/bin/sh -c \"unset MANPAGER;col -b -x | \
     -c 'nmap K :Man <C-R>=expand(\\\"<cword>\\\")<CR><CR>' -\""
 
 set -x GPG_TTY (tty)
+
+# The ale vim plugin requires this.
+if not set -q TMPDIR
+    set -gx TMPDIR /tmp
+end
