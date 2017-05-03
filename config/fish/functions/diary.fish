@@ -1,8 +1,9 @@
 function diary
-  set date (date --rfc-3339=date)
-  set entry ~/docs/diary/$date
-  if not test -e $entry
-    echo "# $date" > $entry
-  end
-  eval $EDITOR $entry
+    set date (date "+%y-%m-%d")
+    mkdir -p ~/docs/diary
+    set entry ~/docs/diary/$date.md
+    if not test -e $entry
+        echo "# $date" >$entry
+    end
+    eval $EDITOR $entry
 end
