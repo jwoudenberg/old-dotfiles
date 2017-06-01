@@ -19,7 +19,8 @@ function diary
     eval $EDITOR $entry
 
     # Remove the entry if no text was added to it.
-    set content (string trim (cat $entry))
+    set content (cat $entry)
+    set content (string trim "$content")
     if test "$content" = "$title"
         echo "Deleting empty diary entry."
         rm $entry
