@@ -47,7 +47,7 @@ function fish_prompt --description 'Write out the prompt'
 
 	set -l prompt_status
 	if test $last_status -ne 0
-		set prompt_status ' ' (set_color $fish_color_status) "[$last_status]" "$normal"
+		set prompt_status (set_color $fish_color_status) "[$last_status] " "$normal"
 	end
 
     set -l mode_color
@@ -68,5 +68,5 @@ function fish_prompt --description 'Write out the prompt'
 		)
 	end
 
-    echo -n -s \n (set_color $fish_color_host) (pwd | sed "s|$HOME|~|") (set_color $fish_color_status) (__fish_git_prompt) \n (set_color $mode_color) "❯ "(set_color normal)
+    echo -n -s \n $prompt_status (set_color $fish_color_host) (pwd | sed "s|$HOME|~|") (set_color $fish_color_status) (__fish_git_prompt) \n (set_color $mode_color) "❯ "(set_color normal)
 end
