@@ -11,8 +11,7 @@ set -x EDITOR nvim
 
 # Set aliases.
 alias vimrc "$EDITOR ~/.config/nvim/init.vim"
-alias vim "nvim"
-alias stoeffelvim "nvim -u ~/.dotfiles/vim/vimrc"
+alias vim "env NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim"
 alias nvim "env NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim"
 alias todo "$EDITOR ~/docs/todo.txt"
 
