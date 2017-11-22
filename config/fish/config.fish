@@ -10,7 +10,7 @@ set fish_greeting
 alias lock "xscreensaver-command --lock"
 alias xclip "xclip -selection clipboard"
 alias vimrc "$EDITOR ~/.config/nvim/init.vim"
-alias vim "nvim"
+alias vim "env NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim"
 alias nvim "env NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim"
 alias todo "$EDITOR ~/docs/todo.txt"
 

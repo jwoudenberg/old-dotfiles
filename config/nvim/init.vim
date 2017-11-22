@@ -8,13 +8,15 @@ source ~/dev/brangelina/brangelina.vim
 call plug#begin('~/.vim/plugged')
   call BrangelinaPlugins()
   " (3) Add your custom plugins below.
-  Plug 'whatyouhide/vim-gotham'
+  Plug 'dracula/vim'
+  Plug 'parsonsmatt/intero-neovim'
 call plug#end()
 
 " (4) Configure the theme you want to use below.
-colorscheme Gotham
-let g:lightline.colorscheme = 'gotham'
+colorscheme dracula
+let g:lightline.colorscheme = 'Dracula'
 set background=dark
 let g:neoterm_shell = 'fish'
-
+set colorcolumn=81
+let g:intero_use_neomake=0
 " (5) Enjoy using branglina.vim. Issues and pull requests are welcome!
