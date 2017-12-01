@@ -4,5 +4,5 @@ config/fish/fish_read_history
 config/fish/fishd.*
 config/nvim/.*
 config/nvim/plugged
-config/nvim/spell
+config/nvim/spell/*.spl
 config/nvim/sessions
