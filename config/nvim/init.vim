@@ -20,5 +20,9 @@ set background=dark
 let g:neoterm_shell = 'fish'
 set colorcolumn=81
 let g:neoformat_enabled_ruby = []
+let g:neoformat_enabled_rust = []
+let g:neoformat_enabled_sql = []
+let g:neoformat_enabled_yaml = []
+let g:neoformat_enabled_json = []
 set spell spelllang=en_us
 " (5) Enjoy using branglina.vim. Issues and pull requests are welcome!
