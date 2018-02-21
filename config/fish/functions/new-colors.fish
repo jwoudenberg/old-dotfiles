@@ -8,8 +8,11 @@ function new-colors --description 'Generate a new color scheme for the terminal'
 
     # If the -f flag is set, bust the cache for the current location
     if test (string trim -- "$flag") = '-f'
-        set -U LAST_LOCATION ''
-        rm -f $scheme_path
+        bust-cache $scheme_path
+    end
+
+    if not valid-colors $scheme_path
+        bust-cache $scheme_path
     end
 
     # Shortcut if the location hash didn't change.
@@ -43,6 +46,9 @@ function location-hash
 end
 
 function set-colors -a scheme
+    if not valid-colors $scheme
+        return
+    end
     set foreground (array-to-hex (cat $scheme | jq '.[0]'))
     set light (array-to-hex (cat $scheme | jq '.[1]'))
     set main (array-to-hex (cat $scheme | jq '.[2]'))
@@ -80,4 +86,17 @@ function array-to-hex
     set g (echo "$argv" | jq '.[1]')
     set b (echo "$argv" | jq '.[2]')
     printf "%x%x%x" $r $g $b
+end
+
+function valid-colors -a scheme_path
+    # A smoke test to see we got back the expected format.
+    set test_color (cat $scheme_path | jq '.[0][0]')
+    if test -z "$test_color"
+        return 1
+    end
+end
+
+function bust-cache -a scheme_path
+    set -U LAST_LOCATION ''
+    rm -f $scheme_path
 end
