@@ -90,6 +90,9 @@ end
 
 function valid-colors -a scheme_path
     # A smoke test to see we got back the expected format.
+    if not test -f $scheme_path
+        return 1
+    end
     set test_color (cat $scheme_path | jq '.[0][0]')
     if test -z "$test_color"
         return 1
