@@ -30,7 +30,7 @@ font pango:monospace 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec st -e fish
+bindsym $mod+Return exec sakura -e fish
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -162,3 +162,5 @@ hide_edge_borders both
 
 bindsym Print exec maim ~/tmp/screenshot-$(date +%F-%T).png
 bindsym Ctrl+Print exec maim -s ~/tmp/screenshot-$(date +%F-%T).png
+
+exec --no-startup-id /home/jasper/dotfiles/home/fehbg

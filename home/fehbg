@@ -1,2 +1,2 @@
 #!/bin/sh
-feh  --bg-scale '/home/jasper/.wallpapers/psychonauts/rex_crowle_resized.png' 
+feh --bg-fill '/home/jasper/docs/wallpaper.png'
