@@ -35,8 +35,8 @@ bindsym $mod+Return exec sakura -e fish
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# start dmenu (a program launcher)
-bindsym $mod+p exec dmenu_run
+# start rofi (a program launcher)
+bindsym $mod+p exec rofi -show run
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
